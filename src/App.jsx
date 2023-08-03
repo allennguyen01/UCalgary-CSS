@@ -1,12 +1,27 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
+import Events from "./pages/Events";
+import GetInvolved from "./pages/GetInvolved";
+import Resources from "./pages/Resources";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold text-red-500 underline text-center">
-        Hello world!
-      </h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/get-involved" element={<GetInvolved />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
