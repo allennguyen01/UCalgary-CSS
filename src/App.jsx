@@ -7,6 +7,7 @@ import Events from "./pages/Events";
 import GetInvolved from "./pages/GetInvolved";
 import Resources from "./pages/Resources";
 import ContactUs from "./pages/ContactUs";
+import AntiAsianRacism from "./pages/AntiAsianRacism";
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/get-involved" element={<GetInvolved />} />
           <Route path="/resources" element={<Resources />} />
+          <Route
+            path="/resources/anti-asian-racism"
+            element={<AntiAsianRacism />}
+          />
           <Route path="/contact-us" element={<ContactUs />} />
         </Route>
       </Routes>
