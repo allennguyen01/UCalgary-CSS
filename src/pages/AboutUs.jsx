@@ -3,7 +3,7 @@ import Quote from "../components/Quote";
 
 function AboutUs() {
   return (
-    <div className="flex flex-auto flex-col p-20 gap-12">
+    <div className="flex flex-auto flex-col m-8 gap-12">
       <div id="who-we-are" className="flex flex-col items-center gap-8">
         <div className="flex align-center justify-center gap-8">
           <div>

@@ -5,51 +5,54 @@ export default function Layout() {
   const links = [
     {
       id: 1,
-      content: "ABOUT US",
+      content: "About Us",
       to: "/about-us",
     },
     {
       id: 2,
-      content: "EVENTS",
+      content: "Events",
       to: "/events",
     },
     {
       id: 3,
-      content: "GET INVOLVED",
+      content: "Get Involved",
       to: "/get-involved",
     },
     {
       id: 4,
-      content: "RESOURCES",
+      content: "Resources",
       to: "/resources",
     },
     {
       id: 5,
-      content: "CONTACT US",
+      content: "Contact",
       to: "/contact-us",
     },
   ];
 
   return (
     <>
-      <nav className="flex justify-evenly items-center pt-8 gap-8 font-bold text-lg font-agrandir ">
+      <nav className="flex justify-between items-center gap-8 font-bold text-lg font-agrandir">
         <Link to="/">
           <img src={logo} alt="CSS logo" className="h-16" />
         </Link>
-        {links.map((link) => (
-          <NavLink
-            to={link.to}
-            key={link.id}
-            className="hover:bg-gray-400 rounded-lg px-8 py-4"
-            style={({ isActive }) => {
-              return {
-                backgroundColor: isActive ? "red" : "",
-              };
-            }}
-          >
-            {link.content}
-          </NavLink>
-        ))}
+        <div>
+          {links.map((link) => (
+            <NavLink
+              to={link.to}
+              key={link.id}
+              className="hover:text-red-500 rounded-lg px-4 py-4"
+              style={({ isActive }) => {
+                return {
+                  backgroundColor: isActive ? "red" : "",
+                  color: isActive ? "white" : "",
+                };
+              }}
+            >
+              {link.content}
+            </NavLink>
+          ))}
+        </div>
       </nav>
       <Outlet />
     </>
