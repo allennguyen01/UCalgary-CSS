@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         agrandir: ["Agrandir"],
       },
+      colors: {
+        red: "#FF0000",
+      },
     },
   },
   plugins: [

@@ -9,7 +9,7 @@ export default function Resources() {
         <div
           className={`border-2 border-black relative rounded-lg bg-black text-white`}
         >
-          <p className="text-4xl font-extrabold text-red-500">Resources</p>
+          <p className="text-4xl font-extrabold text-red">Resources</p>
         </div>
         <ResourceBox title={"Chinese Food"} />
         <ResourceBox

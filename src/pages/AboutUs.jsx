@@ -12,7 +12,9 @@ export default function AboutUs() {
       <div id="who-we-are" className="flex flex-col items-center gap-8">
         <div className="flex items-center justify-center gap-16">
           <div>
-            <h1 className="text-6xl font-semibold">Who We Are</h1>
+            <h1 className="text-6xl font-semibold">
+              Who <span className="text-red">We</span> Are
+            </h1>
             <p className="text-xl my-8 leading-relaxed">
               Established in 1968, the Chinese Students&apos; Society (CSS) is
               the pioneering and largest Chinese student club at the University
@@ -39,7 +41,9 @@ export default function AboutUs() {
         </p>
       </div>
       <div id="our-mission">
-        <h1 className="text-6xl font-semibold my-10">Our Mission</h1>
+        <h1 className="text-6xl font-semibold my-10">
+          Our <span className="text-red">Mission</span>
+        </h1>
         <div className="text-xl leading-relaxed flex gap-20">
           <MissionBox
             title="CONNECT"
@@ -66,7 +70,9 @@ export default function AboutUs() {
         </div>
       </div>
       <div id="quotes" className="flex flex-col gap-8">
-        <h1 className="flex text-6xl font-semibold my-8">Team Testimonials</h1>
+        <h1 className="text-6xl font-semibold my-10">
+          Meet the <span className="text-red">Team</span>
+        </h1>
         <div className="flex flex-col items-center">
           <Quote
             quote="By featuring positive feedback from others, your potential clients won’t have to take your word for it, instead they can hear and learn from others’ experiences."

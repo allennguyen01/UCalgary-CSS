@@ -38,7 +38,7 @@ export default function AntiAsianRacism() {
   return (
     <section className="flex flex-col gap-8 m-8">
       <h1 className="text-5xl text-center font-bold mb-4">
-        Anti-Asian Racism Resources
+        <span className="text-red">Anti-Asian</span> Racism Resources
       </h1>
       <div className="flex flex-row items-start">
         <div className="flex flex-col items-start gap-8">

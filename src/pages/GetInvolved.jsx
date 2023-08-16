@@ -7,7 +7,9 @@ function GetInvolved() {
     <div className="flex flex-col gap-20 m-8">
       <section id="member-signup" className="flex gap-12">
         <div className="flex flex-col gap-8 items-start">
-          <h1 className="text-6xl font-bold">Become a Member!</h1>
+          <h1 className="text-6xl font-bold">
+            Become a <span className="text-red">Member!</span>
+          </h1>
           <p className="leading-loose text-lg">
             Sign up for our mailing list if you want to hear exclusive
             information about our club events, opportunities to volunteer, and
@@ -31,7 +33,9 @@ function GetInvolved() {
       </section>
       <section id="exec-signup" className="flex gap-12">
         <div className="flex flex-col gap-8 items-start">
-          <h1 className="text-6xl font-bold">Become a Exec!</h1>
+          <h1 className="text-6xl font-bold">
+            Become a <span className="text-red">Exec!</span>
+          </h1>
           <p className="leading-loose text-lg">
             At CSS, we value diversity and inclusivity and encourage individuals
             from all backgrounds to apply. Our focus is not solely on Chinese

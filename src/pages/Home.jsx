@@ -6,7 +6,7 @@ function Home() {
     <div className="flex flex-auto justify-center items-center gap-10 border-gray-500 border-2 p-8 rounded-lg font-agrandir">
       <div className="flex flex-col items-center gap-4 text-center">
         <h1 className="text-6xl font-semibold font-agrandir">
-          Chinese Students&apos; Society
+          Chinese <span className="text-red">Students&apos;</span> Society
         </h1>
 
         <p className="text-xl">

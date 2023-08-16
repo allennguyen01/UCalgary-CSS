@@ -41,7 +41,7 @@ export default function Layout() {
             <NavLink
               to={link.to}
               key={link.id}
-              className="hover:text-red-500 rounded-lg px-4 py-4"
+              className="hover:text-red rounded-lg px-4 py-4"
               style={({ isActive }) => {
                 return {
                   backgroundColor: isActive ? "red" : "",

@@ -69,7 +69,9 @@ export default function Events() {
         />
         <div className="text-center">
           <div className="my-8">
-            <p className="text-2xl font-bold">Upcoming Event:</p>
+            <p className="text-2xl font-bold">
+              <span className="text-red">Upcoming</span> Event:
+            </p>
             <h1 className="text-4xl">Meet and Greet 2023</h1>
             <p className="text-lg">Description of the event</p>
           </div>
@@ -95,7 +97,9 @@ export default function Events() {
       </section>
 
       <section className="flex flex-col gap-4">
-        <h1 className="text-5xl font-bold">Event Diary</h1>
+        <h1 className="text-5xl font-bold">
+          <span className="text-red">Events</span> Diary
+        </h1>
         <div className="grid grid-cols-3 gap-4 items-center justify-items-center">
           {events.map((e) => (
             <DiaryEvent key={e.id} event={e} />
