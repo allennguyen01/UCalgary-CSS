@@ -36,8 +36,8 @@ export default function AntiAsianRacism() {
   const [boxOpen, setBoxOpen] = useState([false, false, false, false]);
 
   return (
-    <section className="m-12">
-      <h1 className="text-6xl text-center font-bold mb-4">
+    <section className="flex flex-col gap-8 m-8">
+      <h1 className="text-5xl text-center font-bold mb-4">
         Anti-Asian Racism Resources
       </h1>
       <div className="flex flex-row items-start">
@@ -64,7 +64,7 @@ export default function AntiAsianRacism() {
                     break;
                 }
               }}
-              className="flex items-center justify-center text-center text-3xl text-white bg-black w-64 h-24 p-4 rounded-lg hover:bg-gray-200 hover:text-gray-800"
+              className="flex items-center justify-center text-center text-2xl text-white bg-black w-56 h-24 p-4 rounded-lg hover:bg-gray-200 hover:text-gray-800"
             >
               {article.title}
             </a>

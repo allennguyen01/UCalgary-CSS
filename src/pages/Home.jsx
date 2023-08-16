@@ -3,7 +3,7 @@ import ContactIcons from "../components/ContactIcons";
 
 function Home() {
   return (
-    <div className="flex flex-auto justify-center items-center gap-10 border-gray-500 border-2 mt-4 m-12 p-8 rounded-lg font-agrandir">
+    <div className="flex flex-auto justify-center items-center gap-10 border-gray-500 border-2 p-8 rounded-lg font-agrandir">
       <div className="flex flex-col items-center gap-4 text-center">
         <h1 className="text-6xl font-semibold font-agrandir">
           Chinese Students&apos; Society

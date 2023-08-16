@@ -4,7 +4,7 @@ import execImg from "../assets/images/get-involved/exec-recruitment-post.jpg";
 
 function GetInvolved() {
   return (
-    <div className="flex flex-col gap-20 m-12">
+    <div className="flex flex-col gap-20 m-8">
       <section id="member-signup" className="flex gap-12">
         <div className="flex flex-col gap-8 items-start">
           <h1 className="text-6xl font-bold">Become a Member!</h1>

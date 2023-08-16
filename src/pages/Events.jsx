@@ -60,7 +60,7 @@ const events = [
 
 export default function Events() {
   return (
-    <div className="flex flex-col gap-8 m-8">
+    <div className="flex flex-col gap-20 m-8">
       <section className="flex flex-auto gap-8 items-center justify-center">
         <img
           src={img}
@@ -94,9 +94,9 @@ export default function Events() {
         </div>
       </section>
 
-      <section>
+      <section className="flex flex-col gap-4">
         <h1 className="text-5xl font-bold">Event Diary</h1>
-        <div className="grid grid-cols-3 gap-4 items-center justify-items-center my-4">
+        <div className="grid grid-cols-3 gap-4 items-center justify-items-center">
           {events.map((e) => (
             <DiaryEvent key={e.id} event={e} />
           ))}
