@@ -1,4 +1,15 @@
 import img from "../assets/placeholder-image.png";
+import YearEndParty2022 from "../assets/images/events-diary/year-end-party-2022.jpg";
+import YearEndParty2023 from "../assets/images/events-diary/year-end-party-2023.jpg";
+import OctopusFridayGames from "../assets/images/events-diary/octopus-games.jpg";
+import LNY2023 from "../assets/images/events-diary/lny-2023.jpg";
+import LNY2022 from "../assets/images/events-diary/lny-2022.png";
+import LNYPhotoContest2022 from "../assets/images/events-diary/lny-photo-contest-2022.jpg";
+import MeetAndGreet2022 from "../assets/images/events-diary/meet-and-greet-2022.jpg";
+import MeetAndGreet2021 from "../assets/images/events-diary/meet-and-greet-2021.jpg";
+import Diversitea from "../assets/images/events-diary/diversitea.jpg";
+
+import { Card, CardBody, Image, Stack, Text } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 
 const events = [
@@ -6,55 +17,55 @@ const events = [
     id: 0,
     name: "End of Year Party",
     date: "April 6, 2023",
-    img: img,
+    img: YearEndParty2023,
   },
   {
     id: 1,
     name: "Diversitea",
     date: "January 20, 2023",
-    img: img,
+    img: Diversitea,
   },
   {
     id: 2,
     name: "Lunar New Year CSS x CLCC",
     date: "January 27, 2023",
-    img: img,
+    img: LNY2023,
   },
   {
     id: 3,
     name: "Octopus Friday Games",
     date: "November 25, 2022",
-    img: img,
+    img: OctopusFridayGames,
   },
   {
     id: 4,
     name: "Meet & Greet",
     date: "October 14, 2022",
-    img: img,
+    img: MeetAndGreet2022,
   },
   {
     id: 5,
     name: "Year End Party",
     date: "April 1, 2022",
-    img: img,
+    img: YearEndParty2022,
   },
   {
     id: 6,
     name: "Lunar New Year",
     date: "February 6, 2022",
-    img: img,
+    img: LNY2022,
   },
   {
     id: 7,
     name: "New Years Photo Contest x CGSA",
     date: "February 5, 2022",
-    img: img,
+    img: LNYPhotoContest2022,
   },
   {
     id: 8,
     name: "Fall Welcome Event",
     date: "October 22, 2021",
-    img: img,
+    img: MeetAndGreet2021,
   },
 ];
 
@@ -112,16 +123,19 @@ export default function Events() {
 
 function DiaryEvent({ event }) {
   return (
-    <div>
-      <img
-        src={event.img}
-        alt={event.name}
-        width={400}
-        className="border border-black"
-      />
-      <p className="text-lg">{event.name}</p>
-      <p>{event.date}</p>
-    </div>
+    <Card>
+      <CardBody className="flex flex-col gap-4">
+        <Image
+          src={event.img}
+          alt={event.name}
+          className="border border-black w-[400px] h-[300px] object-cover rounded-lg"
+        />
+        <Stack>
+          <Text className="text-lg font-bold">{event.name}</Text>
+          <Text>{event.date}</Text>
+        </Stack>
+      </CardBody>
+    </Card>
   );
 }
 
