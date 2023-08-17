@@ -1,4 +1,11 @@
 import img from "../assets/who-we-are.jpg";
+import LucyHeadshot from "../assets/images/meet-the-team/Lucy.jpg";
+import CeciliaHeadshot from "../assets/images/meet-the-team/Cecilia.jpg";
+import JoyceHeadshot from "../assets/images/meet-the-team/Joyce.jpg";
+import KerryHeadshot from "../assets/images/meet-the-team/Kerry.jpg";
+import ReneeHeadshot from "../assets/images/meet-the-team/Renee.jpg";
+import StephHeadshot from "../assets/images/meet-the-team/Steph.jpg";
+import { Card, CardBody, Image, Stack, Text } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 import Diversity3Icon from "@mui/icons-material/Diversity3";
 import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
@@ -6,6 +13,51 @@ import HandshakeIcon from "@mui/icons-material/Handshake";
 
 export default function AboutUs() {
   const iconSize = 80;
+
+  const teamMembers = [
+    {
+      name: "Lucy Li",
+      photo: LucyHeadshot,
+      position: "Co-President",
+      description:
+        "Hi! I am Lucy and I am one of the Co-Presidents of CSS this year! I am from Vancouver and I am currently in my last year of my BComm degree majoring in Business Analytics. I joined CSS because I want to be a part of a community with likeminded people with the common interest of embracing Chinese culture!",
+    },
+    {
+      name: "Cecilia Xu",
+      photo: CeciliaHeadshot,
+      position: "Co-President",
+      description:
+        "I’m Cecilia, a final-year Neuroscience student at UofC. Originally from China, my profound passion for Chinese culture has driven me to actively engage with and lead CSS. My aim is to create a welcoming and enjoyable space within our campus, where anyone interested in Chinese culture can feel included and free to embrace our shared heritage.",
+    },
+    {
+      name: "Joyce Ho",
+      photo: JoyceHeadshot,
+      position: "VP Finance",
+      description:
+        "My name is Joyce and I am currently in my final year of accounting. I joined CSS in 2021 as the VP of finance. One of my favourite things about CSS is the people. I love working with the other execs to promote Chinese cultre on campus by creating an environment for students to have fun and meet new friends!",
+    },
+    {
+      name: "Kerry Guo",
+      photo: KerryHeadshot,
+      position: "VP Finance",
+      description:
+        "Hi, my name is Kerry, I’m currently in my final year doing Statistics, I’m one of the VP finance. I really like CSS because I was able to meet different people, and all the events were very interesting and interactive.",
+    },
+    {
+      name: "Stephanie Liew",
+      photo: StephHeadshot,
+      position: "VP Marketing",
+      description:
+        "Hello! My name is Stephanie and I’m VP Marketing for CSS!! I’m an international student from Malaysia and currently in my final year of my Kinesiology degree. I’m so thankful that I found CSS during my Uni journey because it’s helped me make so many new friends and meet lots of good people 💓",
+    },
+    {
+      name: "Renee Pi",
+      photo: ReneeHeadshot,
+      position: "VP Events",
+      description:
+        "Hi! I’m Renee and I am in my fourth year of a combined degree in Psychology and Piano Performance. My favourite part of being an executive in CSS has been the events and making new connections with students from so many diverse backgrounds!",
+    },
+  ];
 
   return (
     <div className="flex flex-auto flex-col m-8 gap-12">
@@ -45,14 +97,14 @@ export default function AboutUs() {
           Our <span className="text-red">Mission</span>
         </h1>
         <div className="text-xl leading-relaxed flex gap-20">
-          <MissionBox
+          <MissionCard
             title="CONNECT"
             icon={<Diversity3Icon sx={{ fontSize: iconSize }} />}
             content="CSS celebrates Chinese culture through events and fosters
             relationships with Calgary's Chinese community and other
             cultural clubs on campus. We actively seek new collaborations."
           />
-          <MissionBox
+          <MissionCard
             title="SOCIALIZE"
             icon={<ConnectWithoutContactIcon sx={{ fontSize: iconSize }} />}
             content="CSS enhances the university experience by providing opportunities
@@ -60,7 +112,7 @@ export default function AboutUs() {
               like the Meet and Greet, Sports Tournaments, Dances, Volunteer
               Opportunities, and the Year End Gala."
           />
-          <MissionBox
+          <MissionCard
             title="SUPPORT"
             icon={<HandshakeIcon sx={{ fontSize: iconSize }} />}
             content="CSS engages in community service, welcomes all interested in
@@ -69,70 +121,66 @@ export default function AboutUs() {
           />
         </div>
       </div>
-      <div id="quotes" className="flex flex-col gap-8">
-        <h1 className="text-6xl font-semibold my-10">
+      <div id="meet-the-team" className="flex flex-col gap-8">
+        <h1 className="text-6xl font-semibold">
           Meet the <span className="text-red">Team</span>
         </h1>
-        <div className="flex flex-col items-center">
-          <Quote
-            quote="By featuring positive feedback from others, your potential clients won’t have to take your word for it, instead they can hear and learn from others’ experiences."
-            people="Lucy Li and Cecilia Xu"
-            position="CO-PRESIDENTS"
-            imgSrc={img}
-          />
-          <Quote
-            quote="By featuring positive feedback from others, your potential clients won’t have to take your word for it, instead they can hear and learn from others’ experiences."
-            people="Joyce Ho and Kerry Guo"
-            position="VP OF FINANCE"
-            imgSrc={img}
-            isReversed={true}
-          />
+
+        <div className="grid grid-cols-3 gap-12 mx-12">
+          {teamMembers.map((member) => (
+            <TeamCard key={member.name} teamMember={member} />
+          ))}
         </div>
       </div>
     </div>
   );
 }
 
-function MissionBox({ title, icon, content }) {
+function MissionCard({ title, icon, content }) {
   return (
-    <div className="flex flex-col items-center text-center gap-4">
-      <p className="text-3xl text-center font-bold">{title}</p>
-      {/* <ConnectWithoutContactIcon sx={{ fontSize: 60 }} /> */}
-      {icon}
-      <p>{content}</p>
-    </div>
+    <Card size={"sm"}>
+      <CardBody className="text-center">
+        <Text className="text-3xl text-center font-bold">{title}</Text>
+        {icon}
+        <Text>{content}</Text>
+      </CardBody>
+    </Card>
   );
 }
 
-MissionBox.propTypes = {
+MissionCard.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.element,
   content: PropTypes.string,
 };
 
-function Quote({ quote, people, position, imgSrc, isReversed = false }) {
+function TeamCard({ teamMember }) {
   return (
-    <div
-      className={`flex items-center justify-center gap-32 w-3/4 ${
-        isReversed ? "flex-row-reverse" : ""
-      }`}
-    >
-      <div className="flex flex-col items-center gap-4">
-        <p className="text-2xl text-center">&quot;{quote}&quot;</p>
-        <div className="flex flex-col items-center">
-          <p className="text-xl font-bold">{people}</p>
-          <p className="text-lg font-bold text-gray-500">{position}</p>
-        </div>
-      </div>
-      <img src={imgSrc} alt="" className="h-96 rounded-full" />
-    </div>
+    <Card size={"sm"}>
+      <CardBody>
+        <Image
+          src={teamMember.photo}
+          alt={teamMember.name}
+          borderRadius="lg"
+          width={"sm"}
+        />
+        <Stack mt="6" spacing="3">
+          <Text>
+            <Text fontWeight={"extrabold"} fontSize="2xl">
+              {teamMember.name}
+            </Text>
+            <Text className="text-gray-500" fontSize="lg">
+              {teamMember.position}
+            </Text>
+          </Text>
+
+          <Text>{teamMember.description}</Text>
+        </Stack>
+      </CardBody>
+    </Card>
   );
 }
 
-Quote.propTypes = {
-  quote: PropTypes.string,
-  people: PropTypes.string,
-  position: PropTypes.string,
-  imgSrc: PropTypes.string,
-  isReversed: PropTypes.bool,
+TeamCard.propTypes = {
+  teamMember: PropTypes.object,
 };
