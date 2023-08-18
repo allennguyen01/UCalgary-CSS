@@ -1,36 +1,34 @@
 import img from "../assets/home.jpg";
 import ContactIcons from "../components/ContactIcons";
+import SignUpButton from "../components/SignUpButton";
+import { Divider } from "@chakra-ui/react";
 
 function Home() {
   return (
-    <div className="flex flex-auto justify-center items-center gap-10 border-gray-500 border-2 p-8 rounded-lg font-agrandir">
+    <div className="flex flex-col-reverse lg:flex-row flex-auto justify-center items-center gap-6 lg:gap-12 border-gray-500 border-2 p-4 lg:p-8 rounded-lg">
       <div className="flex flex-col items-center gap-4 text-center">
-        <h1 className="text-6xl font-semibold font-agrandir">
+        <h1 className="text-2xl lg:text-7xl font-semibold">
           Chinese <span className="text-red">Students&apos;</span> Society
         </h1>
 
-        <p className="text-xl">
+        <p className="text-base lg:text-xl">
           Dedicated to promoting Chinese culture since 1968
         </p>
 
-        <a
-          href="https://forms.gle/TEfPJJGGk8kFCDmC8"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-black px-12 py-2 text-white font-semibold rounded-lg my-4"
-        >
-          JOIN US
-        </a>
+        <SignUpButton
+          link="https://forms.gle/TEfPJJGGk8kFCDmC8"
+          title="JOIN US"
+        />
 
-        <svg height="10" width="60%" className="m-4">
-          <line x1="100%" stroke="black" strokeWidth="3" />
-        </svg>
+        <Divider borderColor={"black"} />
 
-        <p className="font-semibold">FOLLOW US ON SOCIAL MEDIA</p>
+        <p className="text-sm lg:text-lg font-semibold">
+          FOLLOW US ON SOCIAL MEDIA
+        </p>
 
         <ContactIcons />
       </div>
-      <img src={img} alt="" className="h-96 rounded-lg" />
+      <img src={img} alt="" className="max-h-96 rounded-lg" />
     </div>
   );
 }
