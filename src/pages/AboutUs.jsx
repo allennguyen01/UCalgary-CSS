@@ -5,7 +5,19 @@ import JoyceHeadshot from "../assets/images/meet-the-team/Joyce.jpg";
 import KerryHeadshot from "../assets/images/meet-the-team/Kerry.jpg";
 import ReneeHeadshot from "../assets/images/meet-the-team/Renee.jpg";
 import StephHeadshot from "../assets/images/meet-the-team/Steph.jpg";
-import { Card, CardBody, Image, Stack, Text } from "@chakra-ui/react";
+import {
+  Card,
+  CardBody,
+  Image,
+  Stack,
+  Text,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  Box,
+} from "@chakra-ui/react";
 import PropTypes from "prop-types";
 import Diversity3Icon from "@mui/icons-material/Diversity3";
 import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
@@ -60,14 +72,14 @@ export default function AboutUs() {
   ];
 
   return (
-    <div className="flex flex-auto flex-col m-8 gap-12">
+    <div className="flex flex-auto flex-col m-2 lg:m-8 gap-12">
       <div id="who-we-are" className="flex flex-col items-center gap-8">
-        <div className="flex items-center justify-center gap-16">
+        <div className="flex flex-col lg:flex-row items-center justify-center lg:gap-16">
           <div>
-            <h1 className="text-6xl font-semibold">
+            <h1 className="text-4xl lg:text-6xl font-semibold">
               Who <span className="text-red">We</span> Are
             </h1>
-            <p className="text-xl my-8 leading-relaxed">
+            <p className="text-base/relaxed lg:text-xl/relaxed my-8">
               Established in 1968, the Chinese Students&apos; Society (CSS) is
               the pioneering and largest Chinese student club at the University
               of Calgary. As a non-profit organization, CSS is devoted to
@@ -83,20 +95,20 @@ export default function AboutUs() {
           <img
             src={img}
             alt="CSS team photo"
-            className="h-[26rem] rounded-full"
+            className="max-h-[32rem] rounded-full"
           />
         </div>
-        <p className="text-lg text-center">
+        <p className="text-sm lg:text-lg text-center max-w-4xl">
           We would like to acknowledge the traditional territories of the people
-          of the Treaty 7 region in Southern Alberta. <br />
-          The City of Calgary is also home to Métis Nation of Alberta, Region 3.
+          of the Treaty 7 region in Southern Alberta. The City of Calgary is
+          also home to Métis Nation of Alberta, Region 3.
         </p>
       </div>
-      <div id="our-mission">
-        <h1 className="text-6xl font-semibold my-10">
+      <div id="our-mission" className="flex flex-col gap-8">
+        <h1 className="text-4xl lg:text-6xl font-semibold">
           Our <span className="text-red">Mission</span>
         </h1>
-        <div className="text-xl leading-relaxed flex gap-20">
+        <div className="flex flex-col lg:flex-row text-xl leading-relaxed gap-8 lg:gap-20">
           <MissionCard
             title="CONNECT"
             icon={<Diversity3Icon sx={{ fontSize: iconSize }} />}
@@ -121,15 +133,17 @@ export default function AboutUs() {
           />
         </div>
       </div>
-      <div id="meet-the-team" className="flex flex-col gap-8">
-        <h1 className="text-6xl font-semibold">
+      <div id="meet-the-team" className="flex flex-col gap-4 lg:gap-8">
+        <h1 className="text-4xl lg:text-6xl font-semibold">
           Meet the <span className="text-red">Team</span>
         </h1>
 
-        <div className="grid grid-cols-3 gap-12 mx-12">
-          {teamMembers.map((member) => (
-            <TeamCard key={member.name} teamMember={member} />
-          ))}
+        <div className="flex items-center justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-12 lg:mx-12">
+            {teamMembers.map((member) => (
+              <TeamCard key={member.name} teamMember={member} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -140,9 +154,9 @@ function MissionCard({ title, icon, content }) {
   return (
     <Card size={"sm"}>
       <CardBody className="text-center">
-        <Text className="text-3xl text-center font-bold">{title}</Text>
-        {icon}
-        <Text>{content}</Text>
+        <Text className="lg:text-3xl font-bold">{title}</Text>
+        <Text>{icon}</Text>
+        <Text className="text-base lg:text-lg leading-relaxed">{content}</Text>
       </CardBody>
     </Card>
   );
@@ -156,26 +170,45 @@ MissionCard.propTypes = {
 
 function TeamCard({ teamMember }) {
   return (
-    <Card size={"sm"}>
+    <Card>
       <CardBody>
-        <Image
-          src={teamMember.photo}
-          alt={teamMember.name}
-          borderRadius="lg"
-          width={"sm"}
-        />
+        <Box className="flex justify-center">
+          <Image
+            src={teamMember.photo}
+            alt={teamMember.name}
+            className="justify-self-center max-h-60 object-contain rounded-xl"
+          />
+        </Box>
+
         <Stack mt="6" spacing="3">
           <Text>
-            <Text fontWeight={"extrabold"} fontSize="2xl">
+            <Text className="font-bold text-lg lg:text-2xl">
               {teamMember.name}
             </Text>
-            <Text className="text-gray-500" fontSize="lg">
+            <Text className="text-sm lg:text-base font-bold text-gray-500">
               {teamMember.position}
             </Text>
           </Text>
 
-          <Text>{teamMember.description}</Text>
+          <Text className="hidden lg:flex text-sm lg:text-base leading-relaxed">
+            {teamMember.description}
+          </Text>
         </Stack>
+        <Accordion allowToggle className="lg:hidden">
+          <AccordionItem className="p-0 m-0">
+            <AccordionButton paddingX={0} paddingY={2}>
+              <Box className="text-sm text- inline flex-1 text-left">
+                Member Bio
+              </Box>
+              <AccordionIcon />
+            </AccordionButton>
+            <AccordionPanel padding={0}>
+              <Text className="text-xs leading-relaxed">
+                {teamMember.description}
+              </Text>
+            </AccordionPanel>
+          </AccordionItem>
+        </Accordion>
       </CardBody>
     </Card>
   );
