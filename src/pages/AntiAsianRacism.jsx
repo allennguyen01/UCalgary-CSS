@@ -42,8 +42,8 @@ const articles = [
 
 export default function AntiAsianRacism() {
   return (
-    <section className="flex flex-col gap-8 m-8">
-      <h1 className="text-5xl text-center font-bold mb-4">
+    <section className="flex flex-col gap-4 lg:gap-8 m-2 lg:m-8">
+      <h1 className="table-caption text-3xl lg:text-5xl text-center font-bold">
         <span className="text-red">Anti-Asian</span> Racism Resources
       </h1>
 
@@ -57,20 +57,20 @@ function TabResources() {
     <Tabs>
       <TabList>
         {articles.map((article) => (
-          <Tab key={article.id}>
-            <Text className="text-2xl">{article.title}</Text>
+          <Tab key={article.id} className="p-0">
+            <Text className="text-xs lg:text-2xl">{article.title}</Text>
           </Tab>
         ))}
       </TabList>
 
       <TabPanels>
         {articles.map((article) => (
-          <TabPanel key={article.id}>
-            <Text className="text-xl leading-loose">
-              <Text className="text-2xl font-bold">Summary</Text>
-              {article.summary}{" "}
+          <TabPanel key={article.id} padding={2}>
+            <Text className="flex flex-col gap-2 lg:gap-4 text-sm/loose lg:text-xl/loose">
+              <Text className="text-lg lg:text-2xl font-bold">Summary</Text>
+              <Text>{article.summary} </Text>
               <Text className="font-bold">
-                For more info, click the link:
+                To learn more, check out our article:
                 <Link href={article.link} isExternal color="blue.600">
                   {article.title} <ExternalLinkIcon mx="2px" />
                 </Link>
