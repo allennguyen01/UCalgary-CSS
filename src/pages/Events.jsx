@@ -11,6 +11,7 @@ import Diversitea from "../assets/images/events-diary/diversitea.jpg";
 
 import { Card, CardBody, Image, Stack, Text } from "@chakra-ui/react";
 import PropTypes from "prop-types";
+import SignUpButton from "../components/SignUpButton";
 
 const events = [
   {
@@ -72,22 +73,20 @@ const events = [
 export default function Events() {
   return (
     <div className="flex flex-col gap-20 m-8">
-      <section className="flex flex-auto gap-8 items-center justify-center">
-        <img
-          src={img}
-          alt="New Event Poster"
-          className="border-black border-2"
-        />
+      <section className="flex flex-col lg:flex-row flex-auto gap-8 items-center justify-center">
+        <img src={img} alt="New Event Poster" />
         <div className="text-center">
           <div className="my-8">
-            <p className="text-2xl font-bold">
+            <p className="text-lg lg:text-2xl font-bold">
               <span className="text-red">Upcoming</span> Event:
             </p>
-            <h1 className="text-4xl">Meet and Greet 2023</h1>
-            <p className="text-lg">Description of the event</p>
+            <h1 className="text-2xl lg:text-4xl font-bold">
+              Meet and Greet 2023
+            </h1>
+            <p className="lg:text-lg">Description of the event</p>
           </div>
 
-          <div className="my-16 text-lg">
+          <div className="my-8 lg:my-16 text-sm lg:text-lg">
             <p>
               <strong>Location:</strong> University of Calgary
             </p>
@@ -100,18 +99,16 @@ export default function Events() {
           </div>
 
           <div>
-            <a href="" className="bg-black text-white rounded-xl px-8 py-4">
-              SIGN UP
-            </a>
+            <SignUpButton link={""} title={"SIGN UP"} />
           </div>
         </div>
       </section>
 
       <section className="flex flex-col gap-4">
-        <h1 className="text-5xl font-bold">
+        <h1 className="text-3xl lg:text-5xl font-bold">
           <span className="text-red">Events</span> Diary
         </h1>
-        <div className="grid grid-cols-3 gap-4 items-center justify-items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 items-center justify-items-center">
           {events.map((e) => (
             <DiaryEvent key={e.id} event={e} />
           ))}
