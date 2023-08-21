@@ -7,7 +7,7 @@ import Events from "./pages/Events";
 import GetInvolved from "./pages/GetInvolved";
 import Resources from "./pages/Resources";
 import ContactUs from "./pages/ContactUs";
-import AntiAsianRacism from "./pages/AntiAsianRacism";
+import AntiAsianRacism from "./pages/resources/AntiAsianRacism";
 
 function App() {
   return (
