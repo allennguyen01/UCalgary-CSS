@@ -4,17 +4,22 @@ import execImg from "../assets/images/get-involved/exec-recruitment-post.jpg";
 
 function GetInvolved() {
   return (
-    <div className="flex flex-col gap-20 m-8">
-      <section id="member-signup" className="flex gap-12">
-        <div className="flex flex-col gap-8 items-start">
-          <h1 className="text-6xl font-bold">
+    <div className="flex flex-col gap-8 lg:gap-20 m-2 lg:m-8">
+      <section
+        id="member-signup"
+        className="flex flex-col lg:flex-row gap-8 lg:gap-12"
+      >
+        <div className="flex flex-col gap-4 lg:gap-8 items-start">
+          <h1 className="text-3xl lg:text-6xl font-bold">
             Become a <span className="text-red">Member!</span>
           </h1>
-          <p className="leading-loose text-lg">
+          <p className="text-sm/loose lg:text-lg/loose">
             Sign up for our mailing list if you want to hear exclusive
             information about our club events, opportunities to volunteer, and
             executive applications! <br /> <br />
-            You can also purchase a membership with CSS for $____. <br />
+            <strong>
+              You can also purchase a membership with CSS for $____.
+            </strong>{" "}
             The membership gives you FREE access to all of our events over the
             23/24 academic year. This means you can bypass the entry fee ($3-5)
             for each event. You can purchase our membership at any point during
@@ -31,12 +36,15 @@ function GetInvolved() {
           className="w-[32rem] object-contain"
         />
       </section>
-      <section id="exec-signup" className="flex gap-12">
-        <div className="flex flex-col gap-8 items-start">
-          <h1 className="text-6xl font-bold">
+      <section
+        id="exec-signup"
+        className="flex flex-col lg:flex-row gap-8 lg:gap-12"
+      >
+        <div className="flex flex-col gap-4 lg:gap-8 items-start">
+          <h1 className="text-3xl lg:text-6xl font-bold">
             Become a <span className="text-red">Exec!</span>
           </h1>
-          <p className="leading-loose text-lg">
+          <p className="text-sm/loose lg:text-lg/loose">
             At CSS, we value diversity and inclusivity and encourage individuals
             from all backgrounds to apply. Our focus is not solely on Chinese
             ethnicity or the most impressive resumes and experiences. Instead,
