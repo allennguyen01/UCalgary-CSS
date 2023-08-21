@@ -8,6 +8,7 @@ import GetInvolved from "./pages/GetInvolved";
 import Resources from "./pages/Resources";
 import ContactUs from "./pages/ContactUs";
 import AntiAsianRacism from "./pages/resources/AntiAsianRacism";
+import ChineseCommunities from "./pages/resources/ChineseCommunities";
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
           <Route
             path="/resources/anti-asian-racism"
             element={<AntiAsianRacism />}
+          />
+          <Route
+            path="/resources/chinese-communities"
+            element={<ChineseCommunities />}
           />
           <Route path="/contact-us" element={<ContactUs />} />
         </Route>

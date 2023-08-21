@@ -16,6 +16,8 @@ export default function Resources() {
           title={"Other Chinese Communities in Calgary"}
           colSpan={2}
           backgroundColor="black"
+          link={"/resources/chinese-communities"}
+          openNewTab={false}
         />
         <ResourceBox
           title={"Historic Chinatown Tour"}
