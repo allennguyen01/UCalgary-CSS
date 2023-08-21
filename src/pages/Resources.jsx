@@ -4,19 +4,18 @@ import PropTypes from "prop-types";
 
 export default function Resources() {
   return (
-    <div className="flex flex-auto">
-      <div className="grid grid-cols-4 grid-rows-3 gap-4 mx-24 text-lg child:flex child:items-center child:justify-center child:text-center child:p-8">
-        <div
-          className={`border-2 border-black relative rounded-lg bg-black text-white`}
-        >
-          <p className="text-4xl font-extrabold text-red">Resources</p>
+    <div className="flex flex-auto justify-center">
+      <div className="grid mb-8 lg:grid-cols-4 lg:grid-rows-3 gap-4 m-2 lg:mx-24 child:flex child:items-center child:justify-center child:text-center">
+        <div className="border-2 border-black relative rounded-lg bg-black text-white p-8">
+          <p className="text-3xl lg:text-4xl font-extrabold text-red">
+            Resources
+          </p>
         </div>
         <ResourceBox title={"Chinese Food"} />
         <ResourceBox
           title={"Other Chinese Communities in Calgary"}
           colSpan={2}
           backgroundColor="black"
-          textColor="white"
         />
         <ResourceBox
           title={"Historic Chinatown Tour"}
@@ -30,7 +29,6 @@ export default function Resources() {
           link={"/resources/anti-asian-racism"}
           openNewTab={false}
           backgroundColor="black"
-          textColor="white"
         />
         <ResourceBox
           title={"CSS Student Union Page"}
@@ -46,34 +44,11 @@ export default function Resources() {
             "https://www.ucalgary.ca/hr/wellness/wellbeing-worklife/mental-health/resources"
           }
           backgroundColor="black"
-          textColor="white"
         />
         <ResourceBox
           title={"History of Chinatown"}
           link={"https://www.sfu.ca/chinese-canadian-history/"}
         />
-        {/* <div className="border-2 border-black">Resources</div>
-        <div className="border-2 border-black">Chinese Food</div>
-        <div className="border-2 border-black col-span-2 ">
-          Other Chinese Communities in Calgary
-        </div>
-        <div className="border-2 border-black row-span-2 relative">
-          Historic Chinatown Tour
-          <a
-            href="https://www.sfu.ca/chinese-canadian-history/"
-            className="absolute bottom-0 right-0"
-          >
-            <BsFillArrowRightCircleFill size={30} />
-          </a>
-        </div>
-        <div className="border-2 border-black">Anti-Asian Racism</div>
-        <div className="border-2 border-black row-span-2">
-          CSS Student Union Page
-        </div>
-        <div className="border-2 border-black row-span-2">
-          Mental Health Resources UCalgary
-        </div>
-        <div className="border-2 border-black ">History of Chinatown</div> */}
       </div>
     </div>
   );
@@ -86,19 +61,32 @@ function ResourceBox({
   rowSpan = 1,
   openNewTab = true,
   backgroundColor = "white",
-  textColor = "black",
 }) {
   const target = openNewTab ? `"_blank"` : "";
   const rel = openNewTab ? `"noopener noreferrer" ` : "";
+  const bgColorVariants = {
+    white: "bg-white text-black",
+    black: "bg-black text-white",
+  };
+
+  const lgGridColSpans = {
+    1: "lg:col-span-1",
+    2: "lg:col-span-2",
+  };
+
+  const lgGridRowSpans = {
+    1: "lg:row-span-1",
+    2: "lg:row-span-2",
+  };
 
   return (
     <div
-      className={`border-2 border-black relative rounded-lg col-span-${colSpan} row-span-${rowSpan} bg-${backgroundColor} text-${textColor}`}
+      className={`border-2 border-black relative rounded-lg col-span-1 row-span-1 p-6 pr-14 lg:p-12 ${lgGridColSpans[colSpan]} ${lgGridRowSpans[rowSpan]} ${bgColorVariants[backgroundColor]}`}
     >
-      <p>{title}</p>
+      <p className="text-base lg:text-lg">{title}</p>
       <NavLink
         to={link}
-        className="absolute bottom-0 right-0 m-4"
+        className="absolute lg:bottom-0 right-0 m-4"
         target={target}
         rel={rel}
       >
