@@ -18,7 +18,7 @@ function GetInvolved() {
             information about our club events, opportunities to volunteer, and
             executive applications! <br /> <br />
             <strong>
-              You can also purchase a membership with CSS for $____.
+              You can also purchase a membership with CSS for $5.
             </strong>{" "}
             The membership gives you FREE access to all of our events over the
             23/24 academic year. This means you can bypass the entry fee ($3-5)
@@ -42,7 +42,7 @@ function GetInvolved() {
       >
         <div className="flex flex-col gap-4 lg:gap-8 items-start">
           <h1 className="text-3xl lg:text-6xl font-bold">
-            Become a <span className="text-red">Exec!</span>
+            Become an <span className="text-red">Exec!</span>
           </h1>
           <p className="text-sm/loose lg:text-lg/loose">
             At CSS, we value diversity and inclusivity and encourage individuals
