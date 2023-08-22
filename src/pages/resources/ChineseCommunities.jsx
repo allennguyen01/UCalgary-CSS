@@ -44,12 +44,15 @@ const communities = [
 
 export default function ChineseCommunities() {
   return (
-    <div id="calgary-chinese-communities" className="flex flex-col gap-4 m-4">
-      <h1 className="text-3xl font-bold">
+    <div
+      id="calgary-chinese-communities"
+      className="flex flex-col gap-4 m-4 lg:gap-8 lg:m-8"
+    >
+      <h1 className="text-3xl lg:text-5xl font-bold">
         Calgary <span className="text-red">Chinese Communities</span>
       </h1>
       <div className="flex justify-center">
-        <div className="grid gap-4">
+        <div className="grid gap-4 lg:gap-8 lg:grid-cols-3">
           {communities.map((community) => (
             <CommunityCard key={community.name} community={community} />
           ))}
@@ -87,10 +90,12 @@ function CommunityCard({ community }) {
       direction={{ base: "column", sm: "row" }}
       overflow="hidden"
       variant="outline"
-      className={`max-w-[15rem] ${backgroundColor[community.color]}`}
+      className={`max-w-[15rem] lg:max-w-sm ${
+        backgroundColor[community.color]
+      }`}
       backgroundColor={backgroundColor[community.color]}
     >
-      <Box className="flex items-center justify-center text-center m-4 p-4 border-slate-300 border-2 rounded-lg bg-white">
+      <Box className="flex items-center justify-center text-center m-4 p-4 lg:max-w-fit border-slate-300 border-2 rounded-lg bg-white">
         <Text>{community.description}</Text>
       </Box>
 
@@ -98,9 +103,9 @@ function CommunityCard({ community }) {
         <CardBody
           className="flex flex-col items-center justify-center text-center gap-2"
           paddingY={6}
-          paddingX={12}
+          paddingX={6}
         >
-          <Text className="font-bold text-lg">{community.name}</Text>
+          <Text className="font-bold text-lg lg:text-xl">{community.name}</Text>
           <HStack>
             {instagramIcon}
             {websiteIcon}
