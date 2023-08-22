@@ -65,14 +65,14 @@ export default function ChineseCommunities() {
 function CommunityCard({ community }) {
   const iconSize = 25;
   const instagramIcon = community.instagram ? (
-    <a href={community.instagram}>
+    <a href={community.instagram} target="_blank" rel="noopener noreferrer">
       <BsInstagram size={iconSize} />
     </a>
   ) : (
     <></>
   );
   const websiteIcon = community.website ? (
-    <a href={community.website}>
+    <a href={community.website} target="_blank" rel="noopener noreferrer">
       <TbWorldWww size={iconSize} />
     </a>
   ) : (

@@ -11,7 +11,10 @@ export default function Resources() {
             Resources
           </p>
         </div>
-        <ResourceBox title={"Chinese Food"} />
+        <ResourceBox
+          title={"Chinese Food"}
+          link="https://www.thebestcalgary.com/best-chinese-restaurants-calgary/"
+        />
         <ResourceBox
           title={"Other Chinese Communities in Calgary"}
           colSpan={2}
