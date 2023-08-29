@@ -4,44 +4,28 @@ import { BsDiscord } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 
 export default function ContactIcons() {
-  const iconSizes = { sm: 6, lg: 8 };
+  const iconSizes = `h-6 w-6 lg:h-8 lg:w-8`;
 
   const contactLinks = [
     {
       name: "Instagram",
       href: "https://instagram.com/css.ucalgary/",
-      icon: (
-        <BsInstagram
-          className={`h-${iconSizes.sm} w-${iconSizes.sm} lg:h-${iconSizes.lg} lg:w-${iconSizes.lg}`}
-        />
-      ),
+      icon: <BsInstagram className={iconSizes} />,
     },
     {
       name: "Facebook",
       href: "https://www.facebook.com/uofccss",
-      icon: (
-        <BsFacebook
-          className={`h-${iconSizes.sm} w-${iconSizes.sm} lg:h-${iconSizes.lg} lg:w-${iconSizes.lg}`}
-        />
-      ),
+      icon: <BsFacebook className={iconSizes} />,
     },
     {
       name: "Discord",
       href: "https://discord.gg/n3amXwbAaW",
-      icon: (
-        <BsDiscord
-          className={`h-${iconSizes.sm} w-${iconSizes.sm} lg:h-${iconSizes.lg} lg:w-${iconSizes.lg}`}
-        />
-      ),
+      icon: <BsDiscord className={iconSizes} />,
     },
     {
       name: "Email",
       href: "mailto:css.uofcalgary@gmail.com",
-      icon: (
-        <FiMail
-          className={`h-${iconSizes.sm} w-${iconSizes.sm} lg:h-${iconSizes.lg} lg:w-${iconSizes.lg}`}
-        />
-      ),
+      icon: <FiMail className={iconSizes} />,
     },
   ];
 
