@@ -1,4 +1,4 @@
-import img from "../assets/placeholder-image.png";
+import comingSoon from "../assets/images/upcoming-events/coming-soon.jpg";
 import YearEndParty2022 from "../assets/images/events-diary/year-end-party-2022.jpg";
 import YearEndParty2023 from "../assets/images/events-diary/year-end-party-2023.jpg";
 import OctopusFridayGames from "../assets/images/events-diary/octopus-games.jpg";
@@ -73,8 +73,12 @@ const events = [
 export default function Events() {
   return (
     <div className="flex flex-col gap-20 m-8">
-      <section className="flex flex-col lg:flex-row flex-auto gap-8 items-center justify-center">
-        <img src={img} alt="New Event Poster" />
+      <section className="flex flex-col lg:flex-row flex-auto gap-4 lg:gap-8 items-center justify-center">
+        <img
+          src={comingSoon}
+          alt="New Event Poster"
+          className="rounded-xl lg:max-w-xl"
+        />
         <div className="text-center">
           <div className="my-8">
             <p className="text-lg lg:text-2xl font-bold">
@@ -83,7 +87,11 @@ export default function Events() {
             <h1 className="text-2xl lg:text-4xl font-bold">
               Meet and Greet 2023
             </h1>
-            <p className="lg:text-lg">Description of the event</p>
+            <p className="lg:text-lg">
+              Join us to meet the team, socialize with others and play some fun
+              games! The exciting part is that there are prizes to be won as
+              well!!
+            </p>
           </div>
 
           <div className="my-8 lg:my-16 text-sm lg:text-lg">
@@ -91,10 +99,10 @@ export default function Events() {
               <strong>Location:</strong> University of Calgary
             </p>
             <p>
-              <strong>Date:</strong> Sept. 5, 2023
+              <strong>Date:</strong> TBD 👀
             </p>
             <p>
-              <strong>Time:</strong> 7:00 pm
+              <strong>Time:</strong> TBD 👀
             </p>
           </div>
 
