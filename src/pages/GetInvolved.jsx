@@ -13,18 +13,64 @@ function GetInvolved() {
           <h1 className="text-3xl lg:text-6xl font-bold">
             Become a <span className="text-red">Member!</span>
           </h1>
-          <p className="text-sm/loose lg:text-lg/loose">
-            Sign up for our mailing list if you want to hear exclusive
-            information about our club events, opportunities to volunteer, and
-            executive applications! <br /> <br />
-            <strong>
-              You can also purchase a membership with CSS for $5.
-            </strong>{" "}
-            The membership gives you FREE access to all of our events over the
-            23/24 academic year. This means you can bypass the entry fee ($3-5)
-            for each event. You can purchase our membership at any point during
-            the year.
-          </p>
+          <article className="text-sm/loose lg:text-lg/loose">
+            <p>
+              Sign up for our mailing list if you want to hear exclusive
+              information about our club events, opportunities to volunteer, and
+              executive applications! A membership is not needed to be on the
+              mailing list.
+            </p>
+            <br />
+            <p>
+              <span className="font-bold">
+                You can also purchase a membership with CSS for $10.
+              </span>
+              <br />
+              The membership gives you the following benefits:
+              <ol className="list-decimal ml-6">
+                <li>Last for both semesters (Sept 2023 - April 2024)</li>
+                <li>
+                  FREE access to all of our events, bypass the entry fee ($3-5)
+                  for each event
+                </li>
+                <li>Exclusive discounts to local Calgary businesses</li>
+              </ol>
+            </p>
+            <br />
+            <p>
+              <span className="font-bold">How to buy a membership?</span>
+              <ul className="list-disc ml-2">
+                <li>
+                  Payment by cash:
+                  <ul className="list-decimal ml-4">
+                    <li>You can pay by cash at any in-person events</li>
+                  </ul>
+                </li>
+                <li>
+                  Payment by E-transfer:
+                  <ol className="list-decimal ml-4">
+                    <li>
+                      Pay $10 to the following email: css.uofcalgary@gmail.com
+                    </li>
+                    <li>
+                      Copy and paste the following template into the comment
+                      section of the e-transfer:
+                      <div className="ml-2 italic">
+                        <p>&quot;Full Name&quot;</p>
+                        <p>&quot;For CSS membership purchase&quot;</p>
+                      </div>
+                    </li>
+                  </ol>
+                  <p>
+                    Note: *You may be required to put a security question and
+                    answer to send the e-transfer. You can put whatever you
+                    want. If we have any issues receiving your e-transfer, we
+                    will contact you directly.*
+                  </p>
+                </li>
+              </ul>
+            </p>
+          </article>
           <SignUpButton
             link="https://forms.gle/3248imb2hsHckP3KA"
             title="SIGN UP"
