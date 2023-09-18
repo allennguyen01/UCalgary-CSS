@@ -5,6 +5,8 @@ import JoyceHeadshot from "../assets/images/meet-the-team/Joyce.jpg";
 import KerryHeadshot from "../assets/images/meet-the-team/Kerry.jpg";
 import ReneeHeadshot from "../assets/images/meet-the-team/Renee.jpg";
 import StephHeadshot from "../assets/images/meet-the-team/Steph.jpg";
+import EthanHeadshot from "../assets/images/meet-the-team/Ethan.jpg";
+
 import {
   Card,
   CardBody,
@@ -68,6 +70,13 @@ export default function AboutUs() {
       position: "VP Events",
       description:
         "Hi! I’m Renee and I am in my fourth year of a combined degree in Psychology and Piano Performance. My favourite part of being an executive in CSS has been the events and making new connections with students from so many diverse backgrounds!",
+    },
+    {
+      name: "Ethan Do",
+      photo: EthanHeadshot,
+      position: "Jr Vp Marketing",
+      description:
+        "Hi! My name is Ethan and I am the Jr VP of Marketing. I am a first year studying Linguistics, I can’t wait to meet so many new people! I joined CSS so I could meet other likeminded people as well as share Chinese culture with other students! It is really fulfilling seeing other people enjoy the Chinese culture as well as events we host!",
     },
   ];
 

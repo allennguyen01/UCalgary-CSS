@@ -9,7 +9,7 @@ export default function ContactIcons() {
   const contactLinks = [
     {
       name: "Instagram",
-      href: "https://instagram.com/css.ucalgary/",
+      href: "https://www.instagram.com/ucalgary.css/",
       icon: <BsInstagram className={iconSizes} />,
     },
     {

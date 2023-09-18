@@ -1,4 +1,6 @@
-import comingSoon from "../assets/images/upcoming-events/coming-soon.jpg";
+// import comingSoon from "../assets/images/upcoming-events/coming-soon.jpg";
+import WelcomeBack2023 from "../assets/images/upcoming-events/welcome-back-2023.png";
+
 import YearEndParty2022 from "../assets/images/events-diary/year-end-party-2022.jpg";
 import YearEndParty2023 from "../assets/images/events-diary/year-end-party-2023.jpg";
 import OctopusFridayGames from "../assets/images/events-diary/octopus-games.jpg";
@@ -72,10 +74,13 @@ const events = [
 
 export default function Events() {
   return (
-    <div className="flex flex-col gap-20 m-8">
-      <section className="flex flex-col lg:flex-row flex-auto gap-4 lg:gap-8 items-center justify-center">
+    <main className="flex flex-col gap-20 m-8">
+      <section
+        id="upcoming-event"
+        className="flex flex-col lg:flex-row flex-auto gap-4 lg:gap-8 items-center justify-evenly"
+      >
         <img
-          src={comingSoon}
+          src={WelcomeBack2023}
           alt="New Event Poster"
           className="rounded-xl lg:max-w-xl"
         />
@@ -85,9 +90,9 @@ export default function Events() {
               <span className="text-red">Upcoming</span> Event:
             </p>
             <h1 className="text-2xl lg:text-4xl font-bold">
-              Meet and Greet 2023
+              Welcome Back Event 2023
             </h1>
-            <p className="lg:text-lg">
+            <p className="lg:text-lg max-w-lg">
               Join us to meet the team, socialize with others and play some fun
               games! The exciting part is that there are prizes to be won as
               well!!
@@ -96,13 +101,11 @@ export default function Events() {
 
           <div className="my-8 lg:my-16 text-sm lg:text-lg">
             <p>
-              <strong>Location:</strong> University of Calgary
-            </p>
-            <p>
-              <strong>Date:</strong> TBD 👀
-            </p>
-            <p>
-              <strong>Time:</strong> TBD 👀
+              <strong>Location:</strong> ICT 114 - University of Calgary
+              <br />
+              <strong>Date:</strong> October 3, 2023
+              <br />
+              <strong>Time:</strong> 6:00 - 8:00 p.m.
             </p>
           </div>
 
@@ -122,7 +125,7 @@ export default function Events() {
           ))}
         </div>
       </section>
-    </div>
+    </main>
   );
 }
 
