@@ -7,6 +7,7 @@ import ReneeHeadshot from "../assets/images/meet-the-team/Renee.jpg";
 import StephHeadshot from "../assets/images/meet-the-team/Steph.jpg";
 import AllenHeadshot from "../assets/images/meet-the-team/Allen.jpg";
 import EthanHeadshot from "../assets/images/meet-the-team/Ethan.jpg";
+import KevinHeadshot from "../assets/images/meet-the-team/Kevin.jpg";
 
 import {
   Card,
@@ -85,6 +86,13 @@ export default function AboutUs() {
       position: "Jr VP Marketing",
       description:
         "Hi! My name is Ethan and I am the Jr VP of Marketing. I am a first year studying Linguistics, I can't wait to meet so many new people! I joined CSS so I could meet other likeminded people as well as share Chinese culture with other students! It is really fulfilling seeing other people enjoy the Chinese culture as well as events we host!",
+    },
+    {
+      name: "Kevin Li",
+      photo: KevinHeadshot,
+      position: "Graphic Designer",
+      description:
+        "I study Graphic Design at Pratt Institute in New York. I'm captivated by design because it's a humble, subtle, yet powerful art that's all around us. As a big fan of Chinese culture and history, I joined out at CSS to integrate this interest with my skills in art.",
     },
   ];
 
