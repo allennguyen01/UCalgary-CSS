@@ -1,6 +1,7 @@
 import img from "../assets/home.jpg";
 import ContactIcons from "../components/ContactIcons";
 import SignUpButton from "../components/SignUpButton";
+import { TypeAnimation } from "react-type-animation";
 import { Divider } from "@chakra-ui/react";
 
 function Home() {
@@ -11,7 +12,23 @@ function Home() {
           Chinese <span className="text-red">Students&apos;</span> Society
         </h1>
 
-        <p className="text-base lg:text-xl">
+        <TypeAnimation
+          sequence={[
+            "We are U of C's largest Chinese club",
+            1000,
+            "We are a student community",
+            1000,
+            "We are a social organization",
+            1000,
+            "We are a cultural association",
+            1000,
+          ]}
+          speed={50}
+          className="font-semibold text-base lg:text-2xl"
+          repeat={Infinity}
+        />
+
+        <p className="text-base lg:text-lg">
           Dedicated to promoting Chinese culture since 1968
         </p>
 

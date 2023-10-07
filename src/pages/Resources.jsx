@@ -1,6 +1,7 @@
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
 export default function Resources() {
   return (
@@ -86,7 +87,8 @@ function ResourceBox({
 
   return (
     <div
-      className={`border-2 border-black relative rounded-lg col-span-1 row-span-1 p-6 pr-14 lg:p-12 ${lgGridColSpans[colSpan]} ${lgGridRowSpans[rowSpan]} ${bgColorVariants[backgroundColor]}`}
+      className={`border-2 border-black relative rounded-lg col-span-1 row-span-1 p-6 pr-14 lg:p-12 
+      ${lgGridColSpans[colSpan]} ${lgGridRowSpans[rowSpan]} ${bgColorVariants[backgroundColor]}`}
     >
       <p className="text-base lg:text-lg">{title}</p>
       <NavLink
@@ -95,7 +97,9 @@ function ResourceBox({
         target={target}
         rel={rel}
       >
-        <BsFillArrowRightCircleFill size={30} />
+        <motion.div whileHover={{ scale: 1.5 }}>
+          <BsFillArrowRightCircleFill size={30} />
+        </motion.div>
       </NavLink>
     </div>
   );
