@@ -1,13 +1,15 @@
 import img from "../assets/who-we-are.jpg";
-import LucyHeadshot from "../assets/images/meet-the-team/Lucy.jpg";
-import CeciliaHeadshot from "../assets/images/meet-the-team/Cecilia.jpg";
-import JoyceHeadshot from "../assets/images/meet-the-team/Joyce.jpg";
-import KerryHeadshot from "../assets/images/meet-the-team/Kerry.jpg";
-import ReneeHeadshot from "../assets/images/meet-the-team/Renee.jpg";
-import StephHeadshot from "../assets/images/meet-the-team/Steph.jpg";
-import AllenHeadshot from "../assets/images/meet-the-team/Allen.jpg";
-import EthanHeadshot from "../assets/images/meet-the-team/Ethan.jpg";
-import KevinHeadshot from "../assets/images/meet-the-team/Kevin.jpg";
+import LucyPhoto from "../assets/images/meet-the-team/Lucy.jpg";
+import CeciliaPhoto from "../assets/images/meet-the-team/Cecilia.jpg";
+import JoycePhoto from "../assets/images/meet-the-team/Joyce.jpg";
+import KerryPhoto from "../assets/images/meet-the-team/Kerry.jpg";
+import ReneePhoto from "../assets/images/meet-the-team/Renee.jpg";
+import StephPhoto from "../assets/images/meet-the-team/Steph.jpg";
+import AllenPhoto from "../assets/images/meet-the-team/Allen.jpg";
+import EthanPhoto from "../assets/images/meet-the-team/Ethan.jpg";
+import KevinPhoto from "../assets/images/meet-the-team/Kevin.jpg";
+import HansonPhoto from "../assets/images/meet-the-team/Hanson.jpg";
+import ChelseaPhoto from "../assets/images/meet-the-team/Chelsea.jpg";
 
 import {
   Card,
@@ -33,63 +35,77 @@ export default function AboutUs() {
   const teamMembers = [
     {
       name: "Lucy Li",
-      photo: LucyHeadshot,
+      photo: LucyPhoto,
       position: "Co-President",
       description:
         "Hi! I am Lucy and I am one of the Co-Presidents of CSS this year! I am from Vancouver and I am currently in my last year of my BComm degree majoring in Business Analytics. I joined CSS because I want to be a part of a community with likeminded people with the common interest of embracing Chinese culture!",
     },
     {
       name: "Cecilia Xu",
-      photo: CeciliaHeadshot,
+      photo: CeciliaPhoto,
       position: "Co-President",
       description:
         "I'm Cecilia, a final-year Neuroscience student at UofC. Originally from China, my profound passion for Chinese culture has driven me to actively engage with and lead CSS. My aim is to create a welcoming and enjoyable space within our campus, where anyone interested in Chinese culture can feel included and free to embrace our shared heritage.",
     },
     {
       name: "Joyce Ho",
-      photo: JoyceHeadshot,
+      photo: JoycePhoto,
       position: "VP Finance",
       description:
         "My name is Joyce and I am currently in my final year of accounting. I joined CSS in 2021 as the VP of finance. One of my favourite things about CSS is the people. I love working with the other execs to promote Chinese cultre on campus by creating an environment for students to have fun and meet new friends!",
     },
     {
       name: "Kerry Guo",
-      photo: KerryHeadshot,
+      photo: KerryPhoto,
       position: "VP Finance",
       description:
         "Hi, my name is Kerry, I'm currently in my final year doing Statistics, I'm one of the VP finance. I really like CSS because I was able to meet different people, and all the events were very interesting and interactive.",
     },
     {
       name: "Stephanie Liew",
-      photo: StephHeadshot,
+      photo: StephPhoto,
       position: "VP Marketing",
       description:
         "Hello! My name is Stephanie and I'm VP Marketing for CSS!! I'm an international student from Malaysia and currently in my final year of my Kinesiology degree. I'm so thankful that I found CSS during my Uni journey because it's helped me make so many new friends and meet lots of good people 💓",
     },
     {
       name: "Renee Pi",
-      photo: ReneeHeadshot,
+      photo: ReneePhoto,
       position: "VP Events",
       description:
         "Hi! I'm Renee and I am in my fourth year of a combined degree in Psychology and Piano Performance. My favourite part of being an executive in CSS has been the events and making new connections with students from so many diverse backgrounds!",
     },
     {
       name: "Allen Nguyen",
-      photo: AllenHeadshot,
+      photo: AllenPhoto,
       position: "VP Development",
       description:
         "Hey! My name is Allen and I'm in my fifth year of Computer Engineering at UBC. I'm in charge of development and maintainence of the club's website. I hope that this website can bring more people to the amazing events that CSS hosts and bring resources that can educate people on Chinese culture. 🕺💃",
     },
     {
+      name: "Hanson Ji",
+      photo: HansonPhoto,
+      position: "VP External/Events",
+      description:
+        "Hey! My name is Hanson and I am in my third year of Chemical Engineering. I joined CSS to further enhance my own understanding of Chinese culture as well as to help share it with others. As VP Events/External I hope to expand our organization's reach and build strong relationships with external organizations and partners.",
+    },
+    {
+      name: "Chelsea Ji",
+      photo: ChelseaPhoto,
+      position: "Jr VP External",
+      description:
+        "Hi everyone! My name is Chelsea and I'm the Jr VP of External here at CSS. I'm currently a first year Education student at U of C and I am super excited to be part of such an inviting community who share similar passion on Chinese culture. It is also always really rewarding and fun to meet new friends who share the same heritage.",
+    },
+    {
       name: "Ethan Do",
-      photo: EthanHeadshot,
+      photo: EthanPhoto,
       position: "Jr VP Marketing",
       description:
         "Hi! My name is Ethan and I am the Jr VP of Marketing. I am a first year studying Linguistics, I can't wait to meet so many new people! I joined CSS so I could meet other likeminded people as well as share Chinese culture with other students! It is really fulfilling seeing other people enjoy the Chinese culture as well as events we host!",
     },
     {
       name: "Kevin Li",
-      photo: KevinHeadshot,
+      photo: KevinPhoto,
       position: "Graphic Designer",
       description:
         "I study Graphic Design at Pratt Institute in New York. I'm captivated by design because it's a humble, subtle, yet powerful art that's all around us. As a big fan of Chinese culture and history, I joined out at CSS to integrate this interest with my skills in art.",
