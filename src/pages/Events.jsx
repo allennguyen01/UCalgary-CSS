@@ -1,5 +1,6 @@
 // import comingSoon from "../assets/images/upcoming-events/coming-soon.jpg";
-import WelcomeBack2023 from "../assets/images/upcoming-events/welcome-back-2023.png";
+// import WelcomeBack2023 from "../assets/images/upcoming-events/welcome-back-2023.png";
+import MahjongPaintNight2023 from "../assets/images/upcoming-events/mahjong-paint-night-2023.jpg";
 
 import YearEndParty2022 from "../assets/images/events-diary/year-end-party-2022.jpg";
 import YearEndParty2023 from "../assets/images/events-diary/year-end-party-2023.jpg";
@@ -82,6 +83,16 @@ const events = [
 ];
 
 export default function Events() {
+  const upcomingEvent = {
+    title: "Mahjong and Painting Night",
+    imgSrc: MahjongPaintNight2023,
+    link: "https://forms.gle/edH5CJyJi7Sqnm91A",
+    description: "Free for members, $5 for non-members",
+    location: "SA 121 - University of Calgary",
+    date: "October 24, 2023",
+    time: "6:30 - 8:00 p.m.",
+  };
+
   return (
     <main className="flex flex-col gap-20 m-8">
       <section
@@ -89,7 +100,7 @@ export default function Events() {
         className="flex flex-col lg:flex-row flex-auto gap-4 lg:gap-8 items-center justify-evenly"
       >
         <img
-          src={WelcomeBack2023}
+          src={upcomingEvent.imgSrc}
           alt="New Event Poster"
           className="rounded-xl lg:max-w-xl"
         />
@@ -99,27 +110,23 @@ export default function Events() {
               <span className="text-red">Upcoming</span> Event:
             </p>
             <h1 className="text-2xl lg:text-4xl font-bold">
-              Welcome Back Event 2023
+              {upcomingEvent.title}
             </h1>
-            <p className="lg:text-lg max-w-lg">
-              Join us to meet the team, socialize with others and play some fun
-              games! The exciting part is that there are prizes to be won as
-              well!!
-            </p>
+            <p className="lg:text-lg max-w-lg">{upcomingEvent.description}</p>
           </div>
 
           <div className="my-8 lg:my-16 text-sm lg:text-lg">
             <p>
-              <strong>Location:</strong> ICT 114 - University of Calgary
+              <strong>Location:</strong> {upcomingEvent.location}
               <br />
-              <strong>Date:</strong> October 3, 2023
+              <strong>Date:</strong> {upcomingEvent.date}
               <br />
-              <strong>Time:</strong> 6:00 - 8:00 p.m.
+              <strong>Time:</strong> {upcomingEvent.time}
             </p>
           </div>
 
           <div>
-            <SignUpButton link={""} title={"SIGN UP"} />
+            <SignUpButton link={upcomingEvent.link} title={"SIGN UP"} />
           </div>
         </div>
       </section>
