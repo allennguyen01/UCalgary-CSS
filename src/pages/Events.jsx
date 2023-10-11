@@ -95,41 +95,7 @@ export default function Events() {
 
   return (
     <main className="flex flex-col gap-20 m-8">
-      <section
-        id="upcoming-event"
-        className="flex flex-col lg:flex-row flex-auto gap-4 lg:gap-8 items-center justify-evenly"
-      >
-        <img
-          src={upcomingEvent.imgSrc}
-          alt="New Event Poster"
-          className="rounded-xl lg:max-w-xl"
-        />
-        <div className="text-center">
-          <div className="my-8">
-            <p className="text-lg lg:text-2xl font-bold">
-              <span className="text-red">Upcoming</span> Event:
-            </p>
-            <h1 className="text-2xl lg:text-4xl font-bold">
-              {upcomingEvent.title}
-            </h1>
-            <p className="lg:text-lg max-w-lg">{upcomingEvent.description}</p>
-          </div>
-
-          <div className="my-8 lg:my-16 text-sm lg:text-lg">
-            <p>
-              <strong>Location:</strong> {upcomingEvent.location}
-              <br />
-              <strong>Date:</strong> {upcomingEvent.date}
-              <br />
-              <strong>Time:</strong> {upcomingEvent.time}
-            </p>
-          </div>
-
-          <div>
-            <SignUpButton link={upcomingEvent.link} title={"SIGN UP"} />
-          </div>
-        </div>
-      </section>
+      <UpcomingEvent upcomingEvent={upcomingEvent} />
 
       <section className="flex flex-col gap-4">
         <h1 className="text-3xl lg:text-5xl font-bold">
@@ -144,6 +110,50 @@ export default function Events() {
     </main>
   );
 }
+
+function UpcomingEvent({ upcomingEvent }) {
+  return (
+    <section
+      id="upcoming-event"
+      className="flex flex-col lg:flex-row flex-auto gap-4 lg:gap-8 items-center justify-evenly"
+    >
+      <img
+        src={upcomingEvent.imgSrc}
+        alt="New Event Poster"
+        className="rounded-xl lg:max-w-xl"
+      />
+      <div className="text-center">
+        <div className="my-8">
+          <p className="text-lg lg:text-2xl font-bold">
+            <span className="text-red">Upcoming</span> Event:
+          </p>
+          <h1 className="text-2xl lg:text-4xl font-bold">
+            {upcomingEvent.title}
+          </h1>
+          <p className="lg:text-lg max-w-lg">{upcomingEvent.description}</p>
+        </div>
+
+        <div className="my-8 lg:my-16 text-sm lg:text-lg">
+          <p>
+            <strong>Location:</strong> {upcomingEvent.location}
+            <br />
+            <strong>Date:</strong> {upcomingEvent.date}
+            <br />
+            <strong>Time:</strong> {upcomingEvent.time}
+          </p>
+        </div>
+
+        <div>
+          <SignUpButton link={upcomingEvent.link} title={"SIGN UP"} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+UpcomingEvent.propTypes = {
+  upcomingEvent: PropTypes.object,
+};
 
 function DiaryEvent({ event }) {
   return (
