@@ -1,6 +1,6 @@
 import { BsInstagram } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
-import { BsDiscord } from "react-icons/bs";
+// import { BsDiscord } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 
 export default function ContactIcons() {
@@ -17,11 +17,11 @@ export default function ContactIcons() {
       href: "https://www.facebook.com/uofccss",
       icon: <BsFacebook className={iconSizes} />,
     },
-    {
-      name: "Discord",
-      href: "https://discord.gg/n3amXwbAaW",
-      icon: <BsDiscord className={iconSizes} />,
-    },
+    // {
+    //   name: "Discord",
+    //   href: "https://discord.gg/n3amXwbAaW",
+    //   icon: <BsDiscord className={iconSizes} />,
+    // },
     {
       name: "Email",
       href: "mailto:css.uofcalgary@gmail.com",
