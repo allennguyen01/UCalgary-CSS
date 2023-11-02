@@ -1,6 +1,7 @@
 // import comingSoon from "../assets/images/upcoming-events/coming-soon.jpg";
 // import WelcomeBack2023 from "../assets/images/upcoming-events/welcome-back-2023.png";
-import MahjongPaintNight2023 from "../assets/images/upcoming-events/mahjong-paint-night-2023.jpg";
+// import MahjongPaintNight2023 from "../assets/images/upcoming-events/mahjong-paint-night-2023.jpg";
+import EmbraceTheWarmth2023 from "../assets/images/upcoming-events/embrace-the-warmth-2023.png";
 
 import YearEndParty2022 from "../assets/images/events-diary/year-end-party-2022.jpg";
 import YearEndParty2023 from "../assets/images/events-diary/year-end-party-2023.jpg";
@@ -83,14 +84,29 @@ const events = [
 ];
 
 export default function Events() {
+  function Description() {
+    return (
+      <div className="text-left">
+        <p>
+          Join us for a fantastic evening with fun games, movies, activities,
+          and delicious food! 🍿
+        </p>{" "}
+        <p>
+          Activities will include (tentatively): Movie Screening, Mahjong & Card
+          Games, Snack Station, Paper Cutting Station, Painting, And More!
+        </p>
+      </div>
+    );
+  }
+
   const upcomingEvent = {
-    title: "Mahjong and Painting Night",
-    imgSrc: MahjongPaintNight2023,
-    link: "https://forms.gle/edH5CJyJi7Sqnm91A",
-    description: "Free for members, $5 for non-members",
-    location: "SA 121 - University of Calgary",
-    date: "October 24, 2023",
-    time: "6:30 - 8:00 p.m.",
+    title: "Embrace the Warmth",
+    imgSrc: EmbraceTheWarmth2023,
+    link: "https://docs.google.com/forms/d/e/1FAIpQLScz_DFHepzYHWqrbXR36CO0XedvSJimuFRwzCDCea2PaUvS-A/viewform",
+    description: <Description />,
+    location: "TBA",
+    date: "Tuesday November 7, 2023",
+    time: "6:30 - 8:30 p.m.",
   };
 
   return (
@@ -122,18 +138,20 @@ function UpcomingEvent({ upcomingEvent }) {
         alt="New Event Poster"
         className="rounded-xl lg:max-w-xl"
       />
-      <div className="text-center">
-        <div className="my-8">
+      <div className="flex flex-col text-center gap-4 lg:gap-8">
+        <div className="flex flex-col lg:gap-2">
           <p className="text-lg lg:text-2xl font-bold">
             <span className="text-red">Upcoming</span> Event:
           </p>
           <h1 className="text-2xl lg:text-4xl font-bold">
             {upcomingEvent.title}
           </h1>
-          <p className="lg:text-lg max-w-lg">{upcomingEvent.description}</p>
+          <p className="text-sm lg:text-lg max-w-lg">
+            {upcomingEvent.description}
+          </p>
         </div>
 
-        <div className="my-8 lg:my-16 text-sm lg:text-lg">
+        <div className="text-sm lg:text-lg">
           <p>
             <strong>Location:</strong> {upcomingEvent.location}
             <br />
