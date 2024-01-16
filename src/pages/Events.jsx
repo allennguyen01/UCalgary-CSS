@@ -1,7 +1,8 @@
 // import comingSoon from "../assets/images/upcoming-events/coming-soon.jpg";
 // import WelcomeBack2023 from "../assets/images/upcoming-events/welcome-back-2023.png";
 // import MahjongPaintNight2023 from "../assets/images/upcoming-events/mahjong-paint-night-2023.jpg";
-import EmbraceTheWarmth2023 from "../assets/images/upcoming-events/embrace-the-warmth-2023.png";
+// import EmbraceTheWarmth2023 from "../assets/images/upcoming-events/embrace-the-warmth-2023.png";
+import WinterMeetAndGreet2024 from "../assets/images/upcoming-events/winter-meet-and-greet-2024.png";
 
 import YearEndParty2022 from "../assets/images/events-diary/year-end-party-2022.jpg";
 import YearEndParty2023 from "../assets/images/events-diary/year-end-party-2023.jpg";
@@ -15,6 +16,8 @@ import Diversitea from "../assets/images/events-diary/diversitea.jpg";
 import FallIcebreaker2023_1 from "../assets/images/events-diary/fall-icebreaker-2023(1).jpg";
 import FallIcebreaker2023_2 from "../assets/images/events-diary/fall-icebreaker-2023(2).jpg";
 import FallIcebreaker2023_3 from "../assets/images/events-diary/fall-icebreaker-2023(3).jpg";
+import EmbraceTheWarmth2023 from "../assets/images/events-diary/embrace-the-warmth-2023.jpg";
+import ChineseMedicine2023 from "../assets/images/events-diary/chinese-medicine-2023.jpg";
 
 import {
   Card,
@@ -114,6 +117,20 @@ const events = [
     schoolYear: 2023,
     img: FallIcebreaker2023_3,
   },
+  {
+    id: 10,
+    name: "Embrace the Warmth Game & Movie Night",
+    date: "November 7, 2023",
+    schoolYear: 2023,
+    img: EmbraceTheWarmth2023,
+  },
+  {
+    id: 11,
+    name: "Traditional Chinese Medicine Destress Night",
+    date: "November 29, 2023",
+    schoolYear: 2023,
+    img: ChineseMedicine2023,
+  },
 ];
 
 export default function Events() {
@@ -121,25 +138,22 @@ export default function Events() {
     return (
       <div className="text-left">
         <p>
-          Join us for a fantastic evening with fun games, movies, activities,
-          and delicious food! 🍿
-        </p>{" "}
-        <p>
-          Activities will include (tentatively): Movie Screening, Mahjong & Card
-          Games, Snack Station, Paper Cutting Station, Painting, And More!
+          Learn about the club, meet new people, enjoy the fun games we will
+          have organized. Best of all, it is completely free and open to non CSS
+          members!
         </p>
       </div>
     );
   }
 
   const upcomingEvent = {
-    title: "Embrace the Warmth",
-    imgSrc: EmbraceTheWarmth2023,
-    link: "https://docs.google.com/forms/d/e/1FAIpQLScz_DFHepzYHWqrbXR36CO0XedvSJimuFRwzCDCea2PaUvS-A/viewform",
+    title: "Winter Meet & Greet",
+    imgSrc: WinterMeetAndGreet2024,
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSfEMrzk9HLGwTM7dYsEiwnlKHv_3Lldupeqq3Vpt4JSRLjvSQ/viewform",
     description: <Description />,
-    location: "TBA",
-    date: "Tuesday November 7, 2023",
-    time: "6:30 - 8:30 p.m.",
+    location: "HNSC 122",
+    date: "Thursday January 18th, 2024",
+    time: "6:00 - 8:00 p.m.",
   };
 
   return (
