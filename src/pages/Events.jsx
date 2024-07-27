@@ -1,8 +1,10 @@
 // import comingSoon from "../assets/images/upcoming-events/coming-soon.jpg";
 // import WelcomeBack2023 from "../assets/images/upcoming-events/welcome-back-2023.png";
 // import MahjongPaintNight2023 from "../assets/images/upcoming-events/mahjong-paint-night-2023.jpg";
-// import EmbraceTheWarmth2023 from "../assets/images/upcoming-events/embrace-the-warmth-2023.png";
-import WinterMeetAndGreet2024 from "../assets/images/upcoming-events/winter-meet-and-greet-2024.png";
+
+import LNY2024_1 from "../assets/images/upcoming-events/lunar-new-year-2024(1).png";
+import LNY2024_2 from "../assets/images/upcoming-events/lunar-new-year-2024(2).png";
+import LNY2024_3 from "../assets/images/upcoming-events/lunar-new-year-2024(3).png";
 
 import YearEndParty2022 from "../assets/images/events-diary/year-end-party-2022.jpg";
 import YearEndParty2023 from "../assets/images/events-diary/year-end-party-2023.jpg";
@@ -35,6 +37,9 @@ import {
 } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 import SignUpButton from "../components/SignUpButton";
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 const breakpoints = {
   base: "0px",
@@ -142,26 +147,15 @@ const events = [
 ];
 
 export default function Events() {
-  function Description() {
-    return (
-      <div className="text-left">
-        <p>
-          Learn about the club, meet new people, enjoy the fun games we will
-          have organized. Best of all, it is completely free and open to non CSS
-          members!
-        </p>
-      </div>
-    );
-  }
-
   const upcomingEvent = {
-    title: "Winter Meet & Greet",
-    imgSrc: WinterMeetAndGreet2024,
-    link: "https://docs.google.com/forms/d/e/1FAIpQLSfEMrzk9HLGwTM7dYsEiwnlKHv_3Lldupeqq3Vpt4JSRLjvSQ/viewform",
-    description: <Description />,
-    location: "HNSC 122",
-    date: "Thursday January 18th, 2024",
-    time: "6:00 - 8:00 p.m.",
+    title: "CSS x CSSA Lunar New Year Celebration",
+    imgSrcs: [LNY2024_1, LNY2024_2, LNY2024_3],
+    link: "https://www.showpass.com/css-x-cssa-lunar-new-year-celebration/",
+    description:
+      "咚咚锵大家 🥁🧧📣 Join us for our BIGGEST EVENT OF THE YEAR ‼️ We will be collaborating with @cssa.uc to host a Lunar New Year Celebration coming February 4th, 2024 to usher in the year of the Dragon 🐉✨",
+    location: "Regency Palace, Dragon City Mall",
+    date: "Sunday February 4, 2024",
+    time: "6:00 - 10:00 p.m.",
   };
 
   return (
@@ -228,20 +222,23 @@ function UpcomingEvent({ upcomingEvent }) {
       id="upcoming-event"
       className="flex flex-col lg:flex-row flex-auto gap-4 lg:gap-8 items-center justify-evenly"
     >
-      <img
-        src={upcomingEvent.imgSrc}
-        alt="New Event Poster"
-        className="rounded-xl lg:max-w-xl"
-      />
+      <Carousel className="rounded-xl lg:max-w-xl">
+        {upcomingEvent.imgSrcs.map((src, index) => (
+          <div key={index}>
+            <img src={src} />
+          </div>
+        ))}
+      </Carousel>
+
       <div className="flex flex-col text-center gap-4 lg:gap-8">
-        <div className="flex flex-col lg:gap-2">
+        <div className="flex flex-col items-center lg:gap-2">
           <p className="text-lg lg:text-2xl font-bold">
             <span className="text-red">Upcoming</span> Event:
           </p>
           <h1 className="text-2xl lg:text-4xl font-bold">
             {upcomingEvent.title}
           </h1>
-          <p className="text-sm lg:text-lg max-w-lg">
+          <p className="text-sm text-left lg:text-lg max-w-lg">
             {upcomingEvent.description}
           </p>
         </div>
