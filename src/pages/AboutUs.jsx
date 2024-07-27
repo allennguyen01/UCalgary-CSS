@@ -1,15 +1,20 @@
 import img from "../assets/who-we-are.jpg";
-import LucyPhoto from "../assets/images/meet-the-team/Lucy.jpg";
-import CeciliaPhoto from "../assets/images/meet-the-team/Cecilia.jpg";
-import JoycePhoto from "../assets/images/meet-the-team/Joyce.jpg";
-import KerryPhoto from "../assets/images/meet-the-team/Kerry.jpg";
 import ReneePhoto from "../assets/images/meet-the-team/Renee.jpg";
-import StephPhoto from "../assets/images/meet-the-team/Steph.jpg";
-import AllenPhoto from "../assets/images/meet-the-team/Allen.jpg";
-import EthanPhoto from "../assets/images/meet-the-team/Ethan.jpg";
-import KevinPhoto from "../assets/images/meet-the-team/Kevin.jpg";
 import HansonPhoto from "../assets/images/meet-the-team/Hanson.jpg";
+import AllenPhoto from "../assets/images/meet-the-team/Allen.jpg";
+import AkhilPhoto from "../assets/images/meet-the-team/Akhil.jpg";
+import MitchellPhoto from "../assets/images/meet-the-team/Mitchell.jpg";
+import KaitlynHoPhoto from "../assets/images/meet-the-team/KaitlynHo.jpg";
+import DeniPhoto from "../assets/images/meet-the-team/Deni.jpg";
+import ZoePhoto from "../assets/images/meet-the-team/Zoe.jpg";
+import EllaPhoto from "../assets/images/meet-the-team/Ella.jpg";
+import WinsomePhoto from "../assets/images/meet-the-team/Winsome.jpg";
+import BoscoPhoto from "../assets/images/meet-the-team/Bosco.jpg";
 import ChelseaPhoto from "../assets/images/meet-the-team/Chelsea.jpg";
+import KaitlynChanPhoto from "../assets/images/meet-the-team/KaitlynChan.jpg";
+import AngelPhoto from "../assets/images/meet-the-team/Angel.jpg";
+import AlvinPhoto from "../assets/images/meet-the-team/Alvin.jpg";
+import KevinPhoto from "../assets/images/meet-the-team/Kevin.jpg";
 
 import {
   Card,
@@ -34,46 +39,18 @@ export default function AboutUs() {
 
   const teamMembers = [
     {
-      name: "Lucy Li",
-      photo: LucyPhoto,
-      position: "Co-President",
-      description:
-        "Hi! I am Lucy and I am one of the Co-Presidents of CSS this year! I am from Vancouver and I am currently in my last year of my BComm degree majoring in Business Analytics. I joined CSS because I want to be a part of a community with likeminded people with the common interest of embracing Chinese culture!",
-    },
-    {
-      name: "Cecilia Xu",
-      photo: CeciliaPhoto,
-      position: "Co-President",
-      description:
-        "I'm Cecilia, a final-year Neuroscience student at UofC. Originally from China, my profound passion for Chinese culture has driven me to actively engage with and lead CSS. My aim is to create a welcoming and enjoyable space within our campus, where anyone interested in Chinese culture can feel included and free to embrace our shared heritage.",
-    },
-    {
-      name: "Joyce Ho",
-      photo: JoycePhoto,
-      position: "VP Finance",
-      description:
-        "My name is Joyce and I am currently in my final year of accounting. I joined CSS in 2021 as the VP of finance. One of my favourite things about CSS is the people. I love working with the other execs to promote Chinese cultre on campus by creating an environment for students to have fun and meet new friends!",
-    },
-    {
-      name: "Kerry Guo",
-      photo: KerryPhoto,
-      position: "VP Finance",
-      description:
-        "Hi, my name is Kerry, I'm currently in my final year doing Statistics, I'm one of the VP finance. I really like CSS because I was able to meet different people, and all the events were very interesting and interactive.",
-    },
-    {
-      name: "Stephanie Liew",
-      photo: StephPhoto,
-      position: "VP Marketing",
-      description:
-        "Hello! My name is Stephanie and I'm VP Marketing for CSS!! I'm an international student from Malaysia and currently in my final year of my Kinesiology degree. I'm so thankful that I found CSS during my Uni journey because it's helped me make so many new friends and meet lots of good people 💓",
-    },
-    {
       name: "Renee Pi",
       photo: ReneePhoto,
-      position: "VP Events",
+      position: "President",
       description:
-        "Hi! I'm Renee and I am in my fourth year of a combined degree in Psychology and Piano Performance. My favourite part of being an executive in CSS has been the events and making new connections with students from so many diverse backgrounds!",
+        "Hi! I'm Renee and I am in my final year of a combined degree in a BA in Psychology and a BMus in Piano Performance. My favourite part of CSS has been the events and meeting so many new people, and I’m looking forward to another great year with the club!",
+    },
+    {
+      name: "Hanson Ji",
+      photo: HansonPhoto,
+      position: "Vice President",
+      description:
+        "Hey! My name is Hanson and I am in my third year of Chemical Engineering. I joined CSS to further enhance my own understanding of Chinese culture as well as to help share it with others. As VP Events/External I hope to expand our organization's reach and build strong relationships with external organizations and partners.",
     },
     {
       name: "Allen Nguyen",
@@ -83,32 +60,95 @@ export default function AboutUs() {
         "Hey! My name is Allen and I'm in my fifth year of Computer Engineering at UBC. I'm in charge of development and maintainence of the club's website. I hope that this website can bring more people to the amazing events that CSS hosts and bring resources that can educate people on Chinese culture. 🕺💃",
     },
     {
-      name: "Hanson Ji",
-      photo: HansonPhoto,
-      position: "VP External/Events",
+      name: "Akhil Verma",
+      photo: AkhilPhoto,
+      position: "VP Marketing",
       description:
-        "Hey! My name is Hanson and I am in my third year of Chemical Engineering. I joined CSS to further enhance my own understanding of Chinese culture as well as to help share it with others. As VP Events/External I hope to expand our organization's reach and build strong relationships with external organizations and partners.",
+        "Hello! My name is Akhil and I'm a VP Marketing for CSS! I love playing video games and going on adventures. Coincidentally, I am also studying marketing as a second year student. I really enjoy contributing to make CSS as amazing as possible and learning about Chinese culture.",
+    },
+    {
+      name: "Mitchell Ou",
+      photo: MitchellPhoto,
+      position: "VP Marketing",
+      description:
+        "yoo my name is mitchell im vp marketing going into my 4th year in computer science! i'm looking forward to meeting and making new friends!!",
+    },
+    {
+      name: "Kaitlyn Ho",
+      photo: KaitlynHoPhoto,
+      position: "VP Marketing",
+      description:
+        "Hi, my name is Kaitlyn Ho and I am VP Marketing for CSS! I am currently heading into my third year in kinesiology. Through CSS, I hope to help other like-minded individuals find community and embrace Chinese culture. I'm also very excited to be a part of such an amazing team and I can't wait to meet everyone at all of the events!",
+    },
+    {
+      name: "Deni Hui",
+      photo: DeniPhoto,
+      position: "VP Marketing",
+      description:
+        "Hi! My name is Deni and I'm a third-year business major specializing in supply chain management. I joined CSS in hopes of meeting more people interested in Chinese culture and as the VP of Marketing, I hope to share that love for Chinese culture through our club content.",
+    },
+    {
+      name: "Zoe Zhou",
+      photo: ZoePhoto,
+      position: "VP Marketing",
+      description:
+        "Hi! I'm Zoe and I'm entering my 2nd year of Exercise and Health Physiology. I am VP Marketing and I joined CSS to be more interconnected with my community and my Chinese culture, and help others find belonging on campus. I am excited to meet everyone – I can't wait to acquire unforgettable experiences and memories with the community!",
+    },
+    {
+      name: "Ella Wang",
+      photo: EllaPhoto,
+      position: "VP Events",
+      description:
+        "Hi, my name is Ella and I am in my fourth year of Finance. While I was born in China, I spent most of my life growing up in Canada. I have been wanting to reconnect with my heritage and forge new connections, so needless to say, I am excited to join as a VP Events of CSS. I look forward to creating new opportunities and memorable experiences for everyone!",
+    },
+    {
+      name: "Winsome Chow",
+      photo: WinsomePhoto,
+      position: "VP Events",
+      description:
+        "Hi! My name is Winsome and I'm in my fourth year of Community Rehabilitation and Disability Studies. I'm looking forward to meeting new people from diverse backgrounds, learning from them, and improving on my own knowledge of Chinese culture! My favourite part of CSS is the fulfillment it brings to see such diverse people be curious, embrace, and enjoy our shared culture!",
+    },
+    {
+      name: "Bosco Li",
+      photo: BoscoPhoto,
+      position: "VP Events",
+      description:
+        "My name is Bosco, and I am in my third year of Civil Engineering. I joined CSS to get more involved in the community and learn more about Chinese culture. As VP Events, I look forward to help organize fun events and create unforgettable experiences.",
     },
     {
       name: "Chelsea Ji",
       photo: ChelseaPhoto,
-      position: "Jr VP External",
+      position: "VP External",
       description:
-        "Hi everyone! My name is Chelsea and I'm the Jr VP of External here at CSS. I'm currently a first year Education student at U of C and I am super excited to be part of such an inviting community who share similar passion on Chinese culture. It is also always really rewarding and fun to meet new friends who share the same heritage.",
+        "Hi! My name is Chelsea and I'm VP of External here at CSS. I'm currently a second year law & society student and I am super grateful to be part of such an inviting community who share similar passions on Chinese culture. It is also always really rewarding and fun to meet new friends who share the same heritage.",
     },
     {
-      name: "Ethan Do",
-      photo: EthanPhoto,
-      position: "Jr VP Marketing",
+      name: "Kaitlyn Chan",
+      photo: KaitlynChanPhoto,
+      position: "VP External",
       description:
-        "Hi! My name is Ethan and I am the Jr VP of Marketing. I am a first year studying Linguistics, I can't wait to meet so many new people! I joined CSS so I could meet other likeminded people as well as share Chinese culture with other students! It is really fulfilling seeing other people enjoy the Chinese culture as well as events we host!",
+        "Hi, I'm Kaitlyn and I am a 4th year accounting major. I joined CSS to learn more about my culture and meet new people. I love playing mahjong so I especially encourage everyone to come to our mahjong events!",
     },
     {
-      name: "Kevin Li",
+      name: "Angel Seraphine",
+      photo: AngelPhoto,
+      position: "VP Finance",
+      description:
+        "Hi everyone! My name is Angel and I am going into my third year of Actuarial Science. I joined CSS as the VP of Finance and I am excited to embrace and share more about Chinese culture. In CSS, I am looking forward to the fun events in the future!",
+    },
+    {
+      name: "Alvin Pan",
+      photo: AlvinPhoto,
+      position: "VP Finance",
+      description:
+        "Hi im Alvin I'm currently in my final year of university studying economics, im am one of the VPs of finance, I'm here to support the education of Chinese culture to students and to meet many new friends.",
+    },
+    {
+      name: "Kevin Baritua",
       photo: KevinPhoto,
-      position: "Graphic Designer",
+      position: "VP Internal",
       description:
-        "I study Graphic Design at Pratt Institute in New York. I'm captivated by design because it's a humble, subtle, yet powerful art that's all around us. As a big fan of Chinese culture and history, I joined out at CSS to integrate this interest with my skills in art.",
+        "Hey, my name is Kevin, this year's VP Internal. I am an incoming third year in the Actuarial Science program. I look forward to meeting new people and working with everyone!",
     },
   ];
 
