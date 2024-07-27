@@ -18,6 +18,7 @@ import FallIcebreaker2023_2 from "../assets/images/events-diary/fall-icebreaker-
 import FallIcebreaker2023_3 from "../assets/images/events-diary/fall-icebreaker-2023(3).jpg";
 import EmbraceTheWarmth2023 from "../assets/images/events-diary/embrace-the-warmth-2023.jpg";
 import ChineseMedicine2023 from "../assets/images/events-diary/chinese-medicine-2023.jpg";
+import WinterMeetAndGreet2024 from "../assets/images/events-diary/winter-meet-and-greet-2024.png";
 
 import {
   Card,
@@ -130,6 +131,13 @@ const events = [
     date: "November 29, 2023",
     schoolYear: 2023,
     img: ChineseMedicine2023,
+  },
+  {
+    id: 12,
+    name: "Winter Meet & Greet",
+    date: "January 18th, 2024",
+    schoolYear: 2023,
+    img: WinterMeetAndGreet2024,
   },
 ];
 
