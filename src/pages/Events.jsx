@@ -1,7 +1,3 @@
-// import comingSoon from "../assets/images/upcoming-events/coming-soon.jpg";
-// import WelcomeBack2023 from "../assets/images/upcoming-events/welcome-back-2023.png";
-// import MahjongPaintNight2023 from "../assets/images/upcoming-events/mahjong-paint-night-2023.jpg";
-
 import LNY2024_1 from "../assets/images/upcoming-events/lunar-new-year-2024(1).png";
 import LNY2024_2 from "../assets/images/upcoming-events/lunar-new-year-2024(2).png";
 import LNY2024_3 from "../assets/images/upcoming-events/lunar-new-year-2024(3).png";
@@ -21,6 +17,12 @@ import FallIcebreaker2023_3 from "../assets/images/events-diary/fall-icebreaker-
 import EmbraceTheWarmth2023 from "../assets/images/events-diary/embrace-the-warmth-2023.jpg";
 import ChineseMedicine2023 from "../assets/images/events-diary/chinese-medicine-2023.jpg";
 import WinterMeetAndGreet2024 from "../assets/images/events-diary/winter-meet-and-greet-2024.png";
+import PaintAndMahjongNight2023 from "../assets/images/events-diary/paint-and-mahjong-night-2023.png";
+import LNY2024 from "../assets/images/events-diary/lny-2024.png";
+import Badminton2024 from "../assets/images/events-diary/badminton-tournament-2024.png";
+import Valentines2024 from "../assets/images/events-diary/valentines-2024.png";
+import TilesAndSmiles2024 from "../assets/images/events-diary/tiles-and-smiles-2024.jpg";
+import NeonNight2024 from "../assets/images/events-diary/neon-night-2024.jpg";
 
 import {
   Card,
@@ -52,97 +54,141 @@ const breakpoints = {
 
 extendTheme({ breakpoints });
 
+let id = 0;
+
 const events = [
   {
-    id: 0,
+    id: id++,
     name: "Fall Welcome Event",
     date: "October 22, 2021",
     schoolYear: 2021,
     img: MeetAndGreet2021,
   },
   {
-    id: 1,
+    id: id++,
     name: "New Years Photo Contest x CGSA",
     date: "February 5, 2022",
     schoolYear: 2021,
     img: LNYPhotoContest2022,
   },
   {
-    id: 2,
+    id: id++,
     name: "Lunar New Year",
     date: "February 6, 2022",
     schoolYear: 2021,
     img: LNY2022,
   },
   {
-    id: 3,
+    id: id++,
     name: "Year End Party",
     date: "April 1, 2022",
     schoolYear: 2021,
     img: YearEndParty2022,
   },
   {
-    id: 4,
+    id: id++,
     name: "Meet & Greet",
     date: "October 14, 2022",
     schoolYear: 2022,
     img: MeetAndGreet2022,
   },
   {
-    id: 5,
+    id: id++,
     name: "Octopus Friday Games",
     date: "November 25, 2022",
     schoolYear: 2022,
     img: OctopusFridayGames,
   },
   {
-    id: 6,
+    id: id++,
     name: "Lunar New Year CSS x CLCC",
     date: "January 27, 2023",
     schoolYear: 2022,
     img: LNY2023,
   },
   {
-    id: 7,
+    id: id++,
     name: "Diversitea",
     date: "January 20, 2023",
     schoolYear: 2022,
     img: Diversitea,
   },
   {
-    id: 8,
+    id: id++,
     name: "End of Year Party",
     date: "April 6, 2023",
     schoolYear: 2022,
     img: YearEndParty2023,
   },
   {
-    id: 9,
+    id: id++,
     name: "Fall Icebreaker",
     date: "October 3, 2023",
     schoolYear: 2023,
     img: FallIcebreaker2023_3,
   },
   {
-    id: 10,
+    id: id++,
+    name: "Paint & Mahjong Night",
+    date: "October 24, 2023",
+    schoolYear: 2023,
+    img: PaintAndMahjongNight2023,
+  },
+  {
+    id: id++,
     name: "Embrace the Warmth Game & Movie Night",
     date: "November 7, 2023",
     schoolYear: 2023,
     img: EmbraceTheWarmth2023,
   },
   {
-    id: 11,
+    id: id++,
     name: "Traditional Chinese Medicine Destress Night",
     date: "November 29, 2023",
     schoolYear: 2023,
     img: ChineseMedicine2023,
   },
   {
-    id: 12,
+    id: id++,
     name: "Winter Meet & Greet",
-    date: "January 18th, 2024",
+    date: "January 18, 2024",
     schoolYear: 2023,
     img: WinterMeetAndGreet2024,
+  },
+  {
+    id: id++,
+    name: "Year of the Dragon Lunar New Year Gala",
+    date: "February 4, 2024",
+    schoolYear: 2023,
+    img: LNY2024,
+  },
+  {
+    id: id++,
+    name: "Valentine's Day Cupid Dash",
+    date: "February 16, 2024",
+    schoolYear: 2023,
+    img: Valentines2024,
+  },
+  {
+    id: id++,
+    name: "Badminton Tournament w/ UCBC, VSA, & TSA",
+    date: "March 16, 2024",
+    schoolYear: 2023,
+    img: Badminton2024,
+  },
+  {
+    id: id++,
+    name: "Tiles and Smiles",
+    date: "March 22, 2024",
+    schoolYear: 2023,
+    img: TilesAndSmiles2024,
+  },
+  {
+    id: id++,
+    name: "Neon Night @ Soundbar Stage & Bar",
+    date: "April 10, 2024",
+    schoolYear: 2023,
+    img: NeonNight2024,
   },
 ];
 
