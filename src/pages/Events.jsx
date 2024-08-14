@@ -1,6 +1,4 @@
-import LNY2024_1 from "../assets/images/upcoming-events/lunar-new-year-2024(1).png";
-import LNY2024_2 from "../assets/images/upcoming-events/lunar-new-year-2024(2).png";
-import LNY2024_3 from "../assets/images/upcoming-events/lunar-new-year-2024(3).png";
+import InstagramScreenshot from "../assets/images/upcoming-events/instagram-screenshot.png";
 
 import YearEndParty2022 from "../assets/images/events-diary/year-end-party-2022.jpg";
 import YearEndParty2023 from "../assets/images/events-diary/year-end-party-2023.jpg";
@@ -195,7 +193,7 @@ const events = [
 export default function Events() {
   const upcomingEvent = {
     title: "CSS x CSSA Lunar New Year Celebration",
-    imgSrcs: [LNY2024_1, LNY2024_2, LNY2024_3],
+    // imgSrcs: [LNY2024_1, LNY2024_2, LNY2024_3],
     link: "https://www.showpass.com/css-x-cssa-lunar-new-year-celebration/",
     description:
       "咚咚锵大家 🥁🧧📣 Join us for our BIGGEST EVENT OF THE YEAR ‼️ We will be collaborating with @cssa.uc to host a Lunar New Year Celebration coming February 4th, 2024 to usher in the year of the Dragon 🐉✨",
@@ -206,7 +204,28 @@ export default function Events() {
 
   return (
     <main className="flex flex-col gap-20 m-8">
-      <UpcomingEvent upcomingEvent={upcomingEvent} />
+      <section
+        id="upcoming-event"
+        className="flex flex-col lg:flex-row flex-auto gap-8 lg:gap-12 items-center justify-evenly"
+      >
+        <img src={InstagramScreenshot} className="lg:max-w-xl rounded-xl" />
+
+        <div className="flex flex-col text-center gap-4 lg:gap-12">
+          <div className="flex flex-col gap-2 lg:gap-8">
+            <h1 className="text-2xl lg:text-4xl font-bold">
+              For <span className="text-red">Upcoming</span> Events:
+            </h1>
+            <p className="text-xl lg:text-2xl font-medium max-w-md">
+              Checkout out our Instagram! It is always up to date with our
+              latest events and club updates.
+            </p>
+          </div>
+          <SignUpButton
+            link={"https://www.instagram.com/ucalgary.css/"}
+            title={"INSTAGRAM"}
+          />
+        </div>
+      </section>
 
       <section className="flex flex-col gap-4">
         <h1 className="text-3xl lg:text-5xl font-bold">

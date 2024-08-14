@@ -1,4 +1,3 @@
-import { Button } from "@chakra-ui/react";
 import membershipImg from "../assets/images/get-involved/showpass-membership-mobile.jpg";
 import SignUpButton from "../components/SignUpButton";
 
