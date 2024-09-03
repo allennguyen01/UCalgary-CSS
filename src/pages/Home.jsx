@@ -33,8 +33,8 @@ function Home() {
         </p>
 
         <SignUpButton
-          link="https://forms.gle/TEfPJJGGk8kFCDmC8"
-          title="JOIN US"
+          link="https://www.showpass.com/m/chinese-students-society-24-25-membership/"
+          title="BECOME A MEMBER"
         />
 
         <Divider borderColor={"black"} />
