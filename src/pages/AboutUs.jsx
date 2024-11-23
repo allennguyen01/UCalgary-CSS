@@ -28,7 +28,7 @@ export default function AboutUs() {
       const { data, error } = await supabase.from("team").select();
       if (data) {
         const team = data.sort((a, b) => {
-          return a.id - b.id;
+          return a.order - b.order;
         });
         setTeam(team);
       }
